@@ -11,5 +11,60 @@
 	<h1>Hello there!</h1>
 
 
+	<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+	<script>
+	
+		$(function () {
+
+
+		// Create app namespace to hold all methods
+		const bubbleApp = {};
+		bubbleApp.apiKey = 'ca6458eda70bc2879ed3d6c923ba72a4';
+		bubbleApp.url = 'https://developers.zomato.com/api/v2.1/'
+
+		// Collect input
+		bubbleApp.collectInfo = function () {
+			$.ajax({
+				url: `${bubbleApp.url}cuisines`,
+				// header: {'user_key': bubbleApp.apiKey},
+				headers: {
+					'user-key': 'ca6458eda70bc2879ed3d6c923ba72a4'
+					},
+				dataType: 'json',
+				method: 'GET',
+				data: {
+					city_id: 89,
+				}
+			}).then((data) => {
+			console.log(data); });
+
+
+		}
+
+		bubbleApp.collectInfo()
+
+		// Make AJAX request with user inputted data
+		bubbleApp.getInfo = function () {
+
+		}
+
+		// Display data on the page
+		bubbleApp.displayInfo = function () {
+
+		}
+
+		// Start app
+		bubbleApp.init = function () {
+
+		}
+
+		});
+
+
+
+	</script>
+
+
+
 </body>
 </html>
