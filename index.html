@@ -20,7 +20,7 @@
 		// Create app namespace to hold all methods
 		const bubbleApp = {};
 		bubbleApp.apiKey = 'ca6458eda70bc2879ed3d6c923ba72a4';
-		bubbleApp.url = 'https://developers.zomato.com/api/v2.1/'
+		bubbleApp.url = 'https://developers.zomato.com/api/v2.1/search?entity_id=89&entity_type=city&cuisines=247'
 
 		// Collect input
 		bubbleApp.collectInfo = function () {
@@ -34,9 +34,16 @@
 				method: 'GET',
 				data: {
 					city_id: 89,
+					cuisines: 247,
 				}
 			}).then((data) => {
-			console.log(data); });
+			console.log(data);
+			console.log(data.restaurants[0].restaurant.name)
+			console.log(data.restaurants[0].restaurant.location.locality)
+			console.log(data.restaurants[19].restaurant.name)
+			console.log(data.restaurants[19].restaurant.location.locality)
+
+			 });
 
 
 		}
