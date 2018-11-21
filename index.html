@@ -40,15 +40,17 @@
 	<script>
 	
 		$(function () {
-
+			bubbleApp.init()
+		});
 
 		// Create app namespace to hold all methods
 		const bubbleApp = {};
 		bubbleApp.apiKey = 'ca6458eda70bc2879ed3d6c923ba72a4';
-		bubbleApp.url = 'https://developers.zomato.com/api/v2.1/search?entity_id=89&entity_type=city&cuisines=247'
+		bubbleApp.url = 'https://developers.zomato.com/api/v2.1/search?entity_id=89&entity_type=city&cuisines=247';
+		bubbleApp.bbtList = [];
 
 		// Collect input
-		bubbleApp.collectInfo = function () {
+		bubbleApp.getInfo = function () {
 			$.ajax({
 				url: `${bubbleApp.url}cuisines`,
 				// header: {'user_key': bubbleApp.apiKey},
@@ -61,36 +63,44 @@
 					city_id: 89,
 					cuisines: 247,
 				}
-			}).then((data) => {
-			console.log(data);
-			console.log(data.restaurants[0].restaurant.name)
-			console.log(data.restaurants[0].restaurant.location.locality)
-			console.log(data.restaurants[19].restaurant.name)
-			console.log(data.restaurants[19].restaurant.location.locality)
+			}).then((res) => {
+				bubbleApp.allPlaces = res.restaurants;
+				bubbleApp.displayNewList(bubbleApp.allPlaces)
+
 
 			 });
+		}
 
+		bubbleApp.displayNewList = function(oldList) {
+			oldList.forEach((place) => {
+				const resObject = {};
+				resObject.name = place.restaurant.name;
+				resObject.locality = place.restaurant.location.locality;
+				resObject.address = place.restaurant.location.address;
+				resObject.cuisine = place.restaurant.cuisines;
+				bubbleApp.bbtList.push(resObject);
+			});
 
 		}
 
-		bubbleApp.collectInfo()
+		console.log(bubbleApp.bbtList);
+
+
+
 
 		// Make AJAX request with user inputted data
-		bubbleApp.getInfo = function () {
+		// bubbleApp.getInfo = function () {
 
-		}
+		// }
 
 		// Display data on the page
-		bubbleApp.displayInfo = function () {
-
-		}
 
 		// Start app
 		bubbleApp.init = function () {
+			bubbleApp.getInfo();
 
 		}
 
-		});
 
 
 
