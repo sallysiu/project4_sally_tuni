@@ -66,8 +66,6 @@
 			}).then((res) => {
 				bubbleApp.allPlaces = res.restaurants;
 				bubbleApp.displayNewList(bubbleApp.allPlaces)
-
-
 			 });
 		}
 
@@ -75,15 +73,46 @@
 			oldList.forEach((place) => {
 				const resObject = {};
 				resObject.name = place.restaurant.name;
-				resObject.locality = place.restaurant.location.locality;
+				resObject.locality = place.restaurant.location.locality.split(', ');
 				resObject.address = place.restaurant.location.address;
 				resObject.cuisine = place.restaurant.cuisines;
 				bubbleApp.bbtList.push(resObject);
 			});
+		}
 
+		console.log(bubbleApp);
+
+		bubbleApp.userPlace = [];
+
+		const userEntry = "dundas street west";	
+
+		bubbleApp.userAnswer = function() {
+			console.log("dug");
+
+			// console.log((bubbleApp.bbtList).length);
+
+			for (i = 0; i < 20; i++) {
+				console.log("Holla");
+				for (a = 0; a < 2; a++) {
+					console.log(bubbleApp.bbtList);
+					// let userMatch = bubbleApp.bbtList[i].locality[a].toLowercase();
+					// if (userEntry == userMatch) {
+					// 	console.log(userMatch);
+					// } else {
+					// 	console.log("gut forking");
+					// }
+				}
+			};
 		}
 
 		console.log(bubbleApp.bbtList);
+
+
+	
+		bubbleApp.userAnswer();
+		
+			
+		
 
 
 
@@ -98,7 +127,7 @@
 		// Start app
 		bubbleApp.init = function () {
 			bubbleApp.getInfo();
-
+			
 		}
 
 
