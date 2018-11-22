@@ -12,6 +12,13 @@
 	<h2>Where are you?</h2>
 
 
+
+
+
+
+
+	
+
 	<form action="">
 		<label for="location">Choose your location:</label>
 		<select name="location" id="location">
@@ -25,75 +32,7 @@
 
 	<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
 	<script src="scripts/script.js"></script>
-	<!-- <script>
 	
-		$(function () {
-			bubbleApp.init()
-		});
-
-		// Create app namespace to hold all methods
-		const bubbleApp = {};
-		bubbleApp.apiKey = 'ca6458eda70bc2879ed3d6c923ba72a4';
-		bubbleApp.url = 'https://developers.zomato.com/api/v2.1/search?entity_id=89&entity_type=city&cuisines=247';
-		bubbleApp.bbtList = [];
-
-		// Collect input
-		bubbleApp.getInfo = function () {
-			$.ajax({
-				url: `${bubbleApp.url}cuisines`,
-				// header: {'user_key': bubbleApp.apiKey},
-				headers: {
-					'user-key': 'ca6458eda70bc2879ed3d6c923ba72a4'
-					},
-				dataType: 'json',
-				method: 'GET',
-				data: {
-					city_id: 89,
-					cuisines: 247,
-				}
-			}).then((res) => {
-				bubbleApp.allPlaces = res.restaurants;
-				bubbleApp.displayNewList(bubbleApp.allPlaces)
-
-
-			 });
-		}
-
-		bubbleApp.displayNewList = function(oldList) {
-			oldList.forEach((place) => {
-				const resObject = {};
-				resObject.name = place.restaurant.name;
-				resObject.locality = place.restaurant.location.locality;
-				resObject.address = place.restaurant.location.address;
-				resObject.cuisine = place.restaurant.cuisines;
-				bubbleApp.bbtList.push(resObject);
-			});
-
-		}
-
-		console.log(bubbleApp.bbtList);
-
-
-
-
-		// Make AJAX request with user inputted data
-		// bubbleApp.getInfo = function () {
-
-		// }
-
-		// Display data on the page
-
-		// Start app
-		bubbleApp.init = function () {
-			bubbleApp.getInfo();
-
-		}
-
-
-
-
-	</script> -->
-
 
 
 </body>
