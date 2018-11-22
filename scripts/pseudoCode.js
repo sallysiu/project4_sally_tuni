@@ -1,6 +1,10 @@
 //access API in a way that only retrieves restaurants that serve bubble tea 
 //store that in a variable (apiPlace)
 
+//USER SEARCH SECTION
+//search input where user will enter a neighbourhood
+//button for search
+//button for random place in a random neighbourhood
 //when user enters the place in the search box the value is stored in a variable (userPlace)
 
 //using the userPlace variable grabs only restaurants in that area (there's a key called Locality with the area)
