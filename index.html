@@ -45,52 +45,155 @@
 
 	<!-- MAIN START -->
 	<main class="main" id="mainContent">
-		<!-- SEARCH START -->
-		<section class="search">
-			<div class="search__wrapper wrapper">
-				<h2 class="search__heading">Search</h2>
+		<!-- AREAS START -->
+		<section class="areas">
+			<div class="areas__wrapper wrapper">
+				<h2 class="areas__heading">Areas</h2>
 
-				<p class="search_text">Instructions/Info</p>
+				<p class="areas__text">Instructions/Info</p>
 
-				<form action="" method="" name="search form" autocomplete="off" autocorrect="off" autocapitalize="on" class="search__form form">
-					<label for="neighbourhood" class="visuallyhidden">Search by neighbourhood</label>
-					<input type="search" class="form__field" id="neighbourhood" name="neighbourhood" placeholder="Search by neighbourhood" required>
+				<!-- CAROUSEL START -->
+				<div class="areas__carousel carousel">
+					<!-- Yonge Street -->
+					<div class="carousel__cell" value="YongeStreet">
 
-					<!-- Hide search button and make a stylized label clickable? -->
-					<div class="form__buttons">
-						<label for="search" class="button__label">Search</label>
-						<button class="button button__search" id="search">Search</button>
+							<div class="carousel__imageContainer">
+								<img class="carousel__image" src="" alt="">
+							</div>
 
-						<label for="random" class="button__label visuallyhidden">Give me a completely random place</label>
-						<button class="button button__random" id="random">Give me a completely random place</button>
+						<h3 class="carousel__heading">Area Name</h3>
+						
+						<!-- CHECK ANOTHER WAY OF CREDITING - FOOTER? -->
+						<p class="carousel__credit">Image source</p>
 					</div>
-				</form>
+
+					<!-- Downtown Yonge -->
+					<div class="carousel__cell" value="DowntownYonge">
+					
+						<div class="carousel__imageContainer">
+							<img class="carousel__image" src="" alt="">
+						</div>
+					
+						<h3 class="carousel__heading">Area Name</h3>
+					
+						<!-- CHECK ANOTHER WAY OF CREDITING - FOOTER? -->
+						<p class="carousel__credit">Image source</p>
+					</div>
+
+					<!-- Harbord Village -->
+					<div class="carousel__cell" value="HarbordVillage">
+					
+						<div class="carousel__imageContainer">
+							<img class="carousel__image" src="" alt="">
+						</div>
+					
+						<h3 class="carousel__heading">Area Name</h3>
+					
+						<!-- CHECK ANOTHER WAY OF CREDITING - FOOTER? -->
+						<p class="carousel__credit">Image source</p>
+					</div>
+
+					<!-- Kensington-Chinatown -->
+					<div class="carousel__cell" value="KensingtonChinatown">
+					
+						<div class="carousel__imageContainer">
+							<img class="carousel__image" src="" alt="">
+						</div>
+					
+						<h3 class="carousel__heading">Area Name</h3>
+					
+						<!-- CHECK ANOTHER WAY OF CREDITING - FOOTER? -->
+						<p class="carousel__credit">Image source</p>
+					</div>
+
+					<!-- North York -->
+					<div class="carousel__cell" value="NorthYork">
+					
+						<div class="carousel__imageContainer">
+							<img class="carousel__image" src="" alt="">
+						</div>
+					
+						<h3 class="carousel__heading">Area Name</h3>
+					
+						<!-- CHECK ANOTHER WAY OF CREDITING - FOOTER? -->
+						<p class="carousel__credit">Image source</p>
+					</div>
+
+					<!-- Bloor West Village -->
+					<!-- <div class="carousel__cell" value="BloorWestVillage">
+					
+						<div class="carousel__imageContainer">
+							<img class="carousel__image" src="" alt="">
+						</div>
+					
+						<h3 class="carousel__heading">Area Name</h3>
+					
+						CHECK ANOTHER WAY OF CREDITING - FOOTER?
+						<p class="carousel__credit">Image source</p>
+					</div> -->
+
+					<!-- Spadina Ave -->
+					<!-- <div class="carousel__cell" value="SpadinaAve">
+					
+						<div class="carousel__imageContainer">
+							<img class="carousel__image" src="" alt="">
+						</div>
+					
+						<h3 class="carousel__heading">Area Name</h3>
+					
+						CHECK ANOTHER WAY OF CREDITING - FOOTER?
+						<p class="carousel__credit">Image source</p>
+					</div> -->
+
+					<!-- Richmond Hill -->
+					<div class="carousel__cell" value="RichmondHill">
+					
+						<div class="carousel__imageContainer">
+							<img class="carousel__image" src="" alt="">
+						</div>
+					
+						<h3 class="carousel__heading">Area Name</h3>
+					
+						<!-- CHECK ANOTHER WAY OF CREDITING - FOOTER? -->
+						<p class="carousel__credit">Image source</p>
+					</div>
+
+					<!-- Dundas Street West -->
+					<div class="carousel__cell" value="DundasStreetWest">
+					
+						<div class="carousel__imageContainer">
+							<img class="carousel__image" src="" alt="">
+						</div>
+					
+						<h3 class="carousel__heading">Area Name</h3>
+					
+						<!-- CHECK ANOTHER WAY OF CREDITING - FOOTER? -->
+						<p class="carousel__credit">Image source</p>
+					</div>					
+				</div>
+				<!-- CAROUSEL END -->
 			</div>
 		</section>
-		<!-- SEARCH END -->
+		<!-- AREAS END -->
 
-		<!-- RESULT START -->'
+		<!-- RESULT START -->
 		<section class="result">
 			<div class="result__wrapper wrapper">
-				<h2 class="result__heading"></h2>
+				<h2 class="result__heading">Result</h2>
 
-				<p class="result__text"></p>
+				<p class="result__text">Info about place</p>
 
-				<!-- BUTTONS START -->
+				<!-- RESULT BUTTONS START -->
 				<div class="result__buttons">
 					<!-- New Place -->
 					<label for="newPlace" class="button__label visuallyhidden">Give me another result</label>
 					<button class="button button__newPlace" id="newPlace">Give me another result</button>
 
 					<!-- Sends to top? -->
-					<label for="newSearch" class="button__label visuallyhidden">Search other neighbourhood</label>
-					<button class="button button__newSearch" id="newSearch">Search other neighbourhood</button>
-					
-					<!-- Give random place -->
-					<label for="random" class="button__label visuallyhidden">Give me a completely random place</label>
-					<button class="button button__random" id="random">Give me a completely random place</button>
+					<label for="newArea" class="button__label visuallyhidden">Search other area</label>
+					<button class="button button__newArea" id="newArea">Search other area</button>
 				</div>
-				<!-- BUTTONS END -->
+				<!-- RESULT BUTTONS END -->
 			</div>
 		</section>
 		<!-- RESULT END -->
@@ -104,10 +207,10 @@
 	<!-- FOOTER END -->
 
 	<!-- TO DO	
-	4 SEARCH HOW TO MAKE SUGGESTION WHEN USER TYPES PLACE
-	5 FINISH SCRIPT	
-	7 DECIDE STYLES
-	8 STYLIZE -->
+	- SEARCH BEST WAY OF CREDITING IMAGES
+	- FINISH SCRIPT	
+	- DECIDE STYLES -- blues, purples, pinks
+	- STYLIZE -->
 
 	<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
 	<script src="scripts/script.js"></script>
