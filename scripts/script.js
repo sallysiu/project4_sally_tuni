@@ -39,34 +39,6 @@ bubbleApp.getInfo = function () {
 }
 
 
-// Green Grotto Tea Room script.js: 68: 5
-// Array[1]
-// script.js: 69: 5
-// Bubble Republic script.js: 68: 5
-// Array[4]
-// script.js: 69: 5
-// Gong Cha script.js: 68: 5
-// Array[8]
-// script.js: 69: 5
-// Bamboo Bubble Tea script.js: 68: 5
-// Array[11]
-// script.js: 69: 5
-// Green Grotto Tea Room script.js: 68: 5
-// Array[12]
-// script.js: 69: 5
-// Chatime script.js: 68: 5
-// Array[13]
-// script.js: 69: 5
-// Pho Do Thi script.js: 68: 5
-// Array[16]
-// script.js: 69: 5
-// Destiny script.js: 68: 5
-// Array[17]
-// script.js: 69: 5
-// Bubble Republic script.js: 68: 5
-// Array[18]
-
-
 
 bubbleApp.displayNewList = function (oldList) {
 	oldList.forEach((place) => {
@@ -74,7 +46,7 @@ bubbleApp.displayNewList = function (oldList) {
 		resObject.name = place.restaurant.name;
 		resObject.locality = place.restaurant.location.locality;
 
-		bubbleApp.locations.push(place.restaurant.location.locality);
+		// bubbleApp.locations.push(place.restaurant.location.locality);
 		resObject.locality = place.restaurant.location.locality.split(', ');
 		resObject.address = place.restaurant.location.address;
 		resObject.cuisine = place.restaurant.cuisines;
@@ -87,23 +59,36 @@ bubbleApp.displayNewList = function (oldList) {
 
 bubbleApp.choices = function () {
 
-	for (i = 0; i < (bubbleApp.bbtList).length; i++) {
+	// for (i = 0; i < (bubbleApp.bbtList).length; i++) {
+	for (i = 0; i < 20; i++) {
+
+		// console.log(i);
 		//		console.log(bubbleApp.bbtList[i].name);
 		//		console.log(bubbleApp.bbtList[i].locality.length);
+		let approved = true;
+
 		for (a = 0; a < bubbleApp.bbtList[i].locality.length; a++) {
 //			console.log(bubbleApp.bbtList[i].locality[a])
-			if ((bubbleApp.bbtList[i].locality[a] == 'Mississauga') || (bubbleApp.bbtList[i].locality[a] == 'Markham') || (bubbleApp.bbtList[i].locality[a] == 'Scarborough')) {
+			if ((bubbleApp.bbtList[i].locality[a] == 'Mississauga') || (bubbleApp.bbtList[i].locality[a] == 'Markham') || (bubbleApp.bbtList[i].locality[a] == "Scarborough")) {
+				approved = false;
 				console.log(bubbleApp.bbtList[i].name);
-				console.log([i]);
-				(bubbleApp.bbtList).splice(i, 1)
+
+				// (bubbleApp.bbtList).splice(i, 1)
 
 				// (bubbleApp.bbtList).splice(i, 1);
 //				outside.push(bubbleApp.bbtList.splice(i, 1))
 			}
 				// bubbleApp.bbtList.splice(i, 1)
 		}
+		if (approved) {
+			console.log('it works?')
+			return bubbleApp.bbtList[i]
+//			bubbleApp.locations.push(bubbleApp.bbtList[i])
+			
+		}
 	}
-	console.log(bubbleApp.bbtList)
+	console.log(bubbleApp.locations)
+	// console.log(bubbleApp.bbtList)
 }
 
 bubbleApp.getPlace = function(userChoice) {
