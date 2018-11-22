@@ -21,4 +21,6 @@
 //give option to go to a random restaurant some place else
 //give option to do another search
 
-
+//Convention for areas
+// RichmondHill
+// NorthYork
