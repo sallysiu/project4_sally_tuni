@@ -1,100 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<title>BobaTO</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Project 4</title>
+	
+	<!-- NEEDS TO BE FILLED -->
+	<meta name="keywords" content="keywords">
+	<meta name="description" content="description">
+	<meta property="og:title" content="title of page (name - home, name - about, etc">
+	<!-- type is already filled -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="url">
+	<meta property="og:image" content="path to image">
+	<meta property="og:site_name" content="site name">
+	<meta property="og:description" content="description">
+	<!-- card is already filled -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:url" content="url">
+	<meta name="twitter:title" content="title of page">
+	<meta name="twitter:description" content="description">
+	<!-- favicon and appleicon -->
+	<link type="image/png" href="assets/favicon.png" rel="icon">
+	<link rel="apple-touch-icon" href="assets/appleIcon.png">
+	<!-- Font awesome (if needed) - get the new link just in case -->
+	<!-- Google fonts -->
+	<!-- animation library (if needed) -->
+	<link rel="stylesheet" href="styles/style.css">	
 </head>
 <body>
 
-	<h1>Hello there!</h1>
-	<h2>Where are you?</h2>
+	<!-- SKIP CONTENT START -->
+	<a href="#mainContent" class="skipLink">Skip to main content</a>
+	<!-- SKIP CONTENT END -->
 
+	<!-- HEADER START -->
+	<header class="header">
+		<div class="header__wrapper wrapper">
+			<h1 class="header__heading">BobaTo</h1>
+		</div>
+	</header>
+	<!-- HEADER END -->
 
-	<form action="">
-		<label for="location">Choose your location:</label>
-		<select name="location" id="location">
-			<!-- <option value="Thornhill">Thornhill</option>
-			<option value="RichmondHill">Richmond Hill</option> -->
-			<option value="NorthYork">North York</option>
-			<option value="DowntownYonge">Downtown Yonge</option>
-		</select>
-	</form>
+	<!-- MAIN START -->
+	<main class="main" id="mainContent">
+		<!-- SEARCH START -->
+		<section class="search">
+			<div class="search__wrapper wrapper">
+				<h2 class="search__heading">Search</h2>
 
+				<p class="search_text">Instructions/Info</p>
+
+				<form action="" method="" name="search form" autocomplete="off" autocorrect="off" autocapitalize="on" class="search__form form">
+					<label for="neighbourhood" class="visuallyhidden">Search by neighbourhood</label>
+					<input type="search" class="form__field" id="neighbourhood" name="neighbourhood" placeholder="Search by neighbourhood" required>
+
+					<!-- Hide search button and make a stylized label clickable? -->
+					<div class="form__buttons">
+						<label for="search" class="button__label">Search</label>
+						<button class="button button__search" id="search">Search</button>
+
+						<label for="random" class="button__label visuallyhidden">Give me a completely random place</label>
+						<button class="button button__random" id="random">Give me a completely random place</button>
+					</div>
+				</form>
+			</div>
+		</section>
+		<!-- SEARCH END -->
+
+		<!-- RESULT START -->'
+		<section class="result">
+			<div class="result__wrapper wrapper">
+				<h2 class="result__heading"></h2>
+
+				<p class="result__text"></p>
+
+				<!-- BUTTONS START -->
+				<div class="result__buttons">
+					<!-- New Place -->
+					<label for="newPlace" class="button__label visuallyhidden">Give me another result</label>
+					<button class="button button__newPlace" id="newPlace">Give me another result</button>
+
+					<!-- Sends to top? -->
+					<label for="newSearch" class="button__label visuallyhidden">Search other neighbourhood</label>
+					<button class="button button__newSearch" id="newSearch">Search other neighbourhood</button>
+					
+					<!-- Give random place -->
+					<label for="random" class="button__label visuallyhidden">Give me a completely random place</label>
+					<button class="button button__random" id="random">Give me a completely random place</button>
+				</div>
+				<!-- BUTTONS END -->
+			</div>
+		</section>
+		<!-- RESULT END -->
+	</main>
+	<!-- MAIN END -->
+
+	<!-- FOOTER START -->
+	<footer class="footer">
+		<p class="footer__text"></p>
+	</footer>
+	<!-- FOOTER END -->
+
+	<!-- TO DO	
+	4 SEARCH HOW TO MAKE SUGGESTION WHEN USER TYPES PLACE
+	5 FINISH SCRIPT	
+	7 DECIDE STYLES
+	8 STYLIZE -->
 
 	<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
 	<script src="scripts/script.js"></script>
-	<!-- <script>
-	
-		$(function () {
-			bubbleApp.init()
-		});
-
-		// Create app namespace to hold all methods
-		const bubbleApp = {};
-		bubbleApp.apiKey = 'ca6458eda70bc2879ed3d6c923ba72a4';
-		bubbleApp.url = 'https://developers.zomato.com/api/v2.1/search?entity_id=89&entity_type=city&cuisines=247';
-		bubbleApp.bbtList = [];
-
-		// Collect input
-		bubbleApp.getInfo = function () {
-			$.ajax({
-				url: `${bubbleApp.url}cuisines`,
-				// header: {'user_key': bubbleApp.apiKey},
-				headers: {
-					'user-key': 'ca6458eda70bc2879ed3d6c923ba72a4'
-					},
-				dataType: 'json',
-				method: 'GET',
-				data: {
-					city_id: 89,
-					cuisines: 247,
-				}
-			}).then((res) => {
-				bubbleApp.allPlaces = res.restaurants;
-				bubbleApp.displayNewList(bubbleApp.allPlaces)
-
-
-			 });
-		}
-
-		bubbleApp.displayNewList = function(oldList) {
-			oldList.forEach((place) => {
-				const resObject = {};
-				resObject.name = place.restaurant.name;
-				resObject.locality = place.restaurant.location.locality;
-				resObject.address = place.restaurant.location.address;
-				resObject.cuisine = place.restaurant.cuisines;
-				bubbleApp.bbtList.push(resObject);
-			});
-
-		}
-
-		console.log(bubbleApp.bbtList);
-
-
-
-
-		// Make AJAX request with user inputted data
-		// bubbleApp.getInfo = function () {
-
-		// }
-
-		// Display data on the page
-
-		// Start app
-		bubbleApp.init = function () {
-			bubbleApp.getInfo();
-
-		}
-
-
-
-
-	</script> -->
-
-
 
 </body>
 </html>
