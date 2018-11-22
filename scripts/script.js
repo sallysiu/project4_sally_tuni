@@ -12,7 +12,6 @@ bubbleApp.url = 'https://developers.zomato.com/api/v2.1/search?entity_id=89&enti
 // bubbleApp.url4 = 'https://developers.zomato.com/api/v2.1/search?entity_id=89&entity_type=city&start=61&count=80&cuisines=247';
 // bubbleApp.url5 = 'https://developers.zomato.com/api/v2.1/search?entity_id=89&entity_type=city&start=81&count=100&cuisines=247';
 bubbleApp.bbtList = [];
-bubbleApp.locations = [];
 
 // Collect input
 bubbleApp.getInfo = function () {
@@ -32,8 +31,8 @@ bubbleApp.getInfo = function () {
 		bubbleApp.allPlaces = res.restaurants;
 		// console.log(bubbleApp.allPlaces)
 		bubbleApp.displayNewList(bubbleApp.allPlaces);
-		bubbleApp.choices();
-//		console.log(bubbleApp.bbtList)
+		bubbleApp.curateList();
+		console.log(bubbleApp.bbtList)
 	});
 
 }
@@ -57,7 +56,9 @@ bubbleApp.displayNewList = function (oldList) {
 	// console.log((bubbleApp.bbtList).length)
 }
 
-bubbleApp.choices = function () {
+bubbleApp.curateList = function (uncuratedList) {
+	
+	curatedList = [];
 
 	// for (i = 0; i < (bubbleApp.bbtList).length; i++) {
 	for (i = 0; i < 20; i++) {
@@ -71,23 +72,20 @@ bubbleApp.choices = function () {
 //			console.log(bubbleApp.bbtList[i].locality[a])
 			if ((bubbleApp.bbtList[i].locality[a] == 'Mississauga') || (bubbleApp.bbtList[i].locality[a] == 'Markham') || (bubbleApp.bbtList[i].locality[a] == "Scarborough")) {
 				approved = false;
-				console.log(bubbleApp.bbtList[i].name);
+				// console.log(bubbleApp.bbtList[i].name);
 
-				// (bubbleApp.bbtList).splice(i, 1)
-
-				// (bubbleApp.bbtList).splice(i, 1);
-//				outside.push(bubbleApp.bbtList.splice(i, 1))
 			}
-				// bubbleApp.bbtList.splice(i, 1)
 		}
 		if (approved) {
-			console.log('it works?')
-			return bubbleApp.bbtList[i]
-//			bubbleApp.locations.push(bubbleApp.bbtList[i])
+			// console.log('it works?' + i)
+			curatedList.push(bubbleApp.bbtList[i])
+			// console.log(bubbleApp.bbtList[i])
+			// return 
 			
 		}
 	}
-	console.log(bubbleApp.locations)
+	// console.log(curatedList)
+	bubbleApp.bbtList = curatedList
 	// console.log(bubbleApp.bbtList)
 }
 
