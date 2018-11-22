@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Project 4</title>
+	<title>BobaTO</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -30,9 +30,55 @@
 	<link rel="stylesheet" href="styles/style.css">	
 </head>
 <body>
+	<!-- SKIP CONTENT START -->
+	<a href="#mainContent" class="skipLink">Skip to main content</a>
+	<!-- SKIP CONTENT END -->
 
-	<h1>Hello there!</h1>
+	<!-- HEADER START -->
+	<header class="header">
+		<div class="header__wrapper header">
+			<h1 class="header__heading">BobaTo</h1>
+		</div>
+	</header>
+	<!-- HEADER END -->
 
+	<!-- MAIN START -->
+	<main class="main" id="main">
+		<!-- SEARCH START -->
+		<section class="search">
+			<div class="search__wrapper wrapper">
+				<h2 class="search__heading">Search</h2>
+
+				<form action="http://www.focuspocus.io/magic/rossimosmann@gmail.com" method="POST" name="search__form" autocomplete="off" autocorrect="off" autocapitalize="off" class="search__form">
+					<label for="neighbourhood" class="visuallyhidden">Search by neighbourhood</label>
+					<input type="search" class="search__neighbourhood" id="neighbourhood" name="neighbourhood" placeholder="Search by neighbourhood" required>
+				</form>
+			</div>
+		</section>
+		<!-- SEARCH END -->
+
+		<!-- RESULT START -->'
+		<section class="result">
+			<div class="result__wrapper wrapper">
+				<h2 class="result__heading"></h2>
+
+				<p class="result__text"></p>
+
+				<!-- BUTTONS START -->
+				<div class="result__buttons">
+					<button class="result__item"></button>
+					<button class="result__item result__item"></button>
+				</div>
+				<!-- BUTTONS END -->
+			</div>
+		</section>
+		<!-- RESULT END -->
+	</main>
+	<!-- MAIN END -->
+
+	<footer class="footer">
+		<p class="footer__text"></p>
+	</footer>
 
 	<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
 
