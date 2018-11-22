@@ -36,22 +36,31 @@
 
 	<!-- HEADER START -->
 	<header class="header">
-		<div class="header__wrapper header">
+		<div class="header__wrapper wrapper">
 			<h1 class="header__heading">BobaTo</h1>
 		</div>
 	</header>
 	<!-- HEADER END -->
 
 	<!-- MAIN START -->
-	<main class="main" id="main">
+	<main class="main" id="mainContent">
 		<!-- SEARCH START -->
 		<section class="search">
 			<div class="search__wrapper wrapper">
 				<h2 class="search__heading">Search</h2>
 
-				<form action="http://www.focuspocus.io/magic/rossimosmann@gmail.com" method="POST" name="search__form" autocomplete="off" autocorrect="off" autocapitalize="off" class="search__form">
+				<p class="search_text">Instructions/Info</p>
+
+				<form action="" method="" name="search form" autocomplete="off" autocorrect="off" autocapitalize="on" class="search__form form">
 					<label for="neighbourhood" class="visuallyhidden">Search by neighbourhood</label>
-					<input type="search" class="search__neighbourhood" id="neighbourhood" name="neighbourhood" placeholder="Search by neighbourhood" required>
+					<input type="search" class="form__field" id="neighbourhood" name="neighbourhood" placeholder="Search by neighbourhood" required>
+
+					<!-- Hide search button and make a stylized label clickable? -->
+					<label for="search" class="button__label">Search</label>
+					<button class="button button__search" id="search">Search</button>
+
+					<label for="random" class="button__label visuallyhidden">Give me a completely random place</label>
+					<button class="button button__random" id="random">Give me a completely random place</button>
 				</form>
 			</div>
 		</section>
@@ -66,8 +75,17 @@
 
 				<!-- BUTTONS START -->
 				<div class="result__buttons">
-					<button class="result__item"></button>
-					<button class="result__item result__item"></button>
+					<!-- New Place -->
+					<label for="newPlace" class="button__label visuallyhidden">Give me another result</label>
+					<button class="button button__newPlace" id="newPlace">Give me another result</button>
+
+					<!-- Sends to top? -->
+					<label for="newSearch" class="button__label visuallyhidden">Search other neighbourhood</label>
+					<button class="button button__newSearch" id="newSearch">Search other neighbourhood</button>
+					
+					<!-- Give random place -->
+					<label for="random" class="button__label visuallyhidden">Give me a completely random place</label>
+					<button class="button button__random" id="random">Give me a completely random place</button>
 				</div>
 				<!-- BUTTONS END -->
 			</div>
@@ -76,9 +94,20 @@
 	</main>
 	<!-- MAIN END -->
 
+	<!-- FOOTER START -->
 	<footer class="footer">
 		<p class="footer__text"></p>
 	</footer>
+	<!-- FOOTER END -->
+
+	<!-- TO DO
+	1 MOVE SCRIPTS TO SCRIPT.JS
+	2 DECIDE CONVENTIONS
+	3 SHOW PAPER HELP CUE
+	4 FINISH SCRIPT
+	5 FINISH PARTIALS
+	5 DECIDE STYLES
+	6 STYLIZE -->
 
 	<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
 
