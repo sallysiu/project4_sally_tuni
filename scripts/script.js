@@ -17,9 +17,14 @@ bubbleApp.DowntownYonge = {
 		"https://developers.zomato.com/api/v2.1/search?entity_id=87091&entity_type=subzone&start=21&cuisines=247" // Downtown Yonge pt2
 	]};
 
+bubbleApp.YongeStreet = {
+	url: ["https://developers.zomato.com/api/v2.1/search?entity_id=4061&entity_type=landmark&cuisines=247",
+	"https://developers.zomato.com/api/v2.1/search?entity_id=4061&entity_type=landmark&start=21&cuisines=247"]
+};
+
 bubbleApp.Thornhill = {
 	url: ["https://developers.zomato.com/api/v2.1/search?entity_id=87971&entity_type=subzone&cuisines=247"]
-}
+};
 
 bubbleApp.HarbordVillage = {
 	url: ["https://developers.zomato.com/api/v2.1/search?entity_id=87201&entity_type=subzone&cuisines=247",
@@ -107,19 +112,33 @@ bubbleApp.certainInfoOnly = function (oldList) {
 bubbleApp.init = function () {
 	// bubbleApp.getInfo();
 	bubbleApp.listenForChange();
-	bubbleApp.randomChoice(bubbleApp.userOptions)
+
+	// bubbleApp.randomChoice(bubbleApp.userOptions)
 	// bubbleApp.getPlace()
 }
 
 bubbleApp.listenForChange = function () {
-	$("select").on("change", function () {
-		// ..store the value of the selected option
-		const userChoice = $(this).val()
+	
+	$(".carousel__cell").on("click", function () {
+		// console.log(this.getAttribute('value'));
+		const userChoice = this.getAttribute('value');
 		console.log(userChoice)
-		// pass this animal string to our get art method to fire off the ajax request and get soem idggerence art
 		bubbleApp.getPlace(userChoice);
-		console.log(userOptions)
-	})
+		// console.log(userOptions)
+
+	});
+
+
+
+
+
+	// $("select").on("change", function () {
+	// 	// ..store the value of the selected option
+	// 	const userChoice = $(this).val()
+	// 	console.log(userChoice)
+	// 	// pass this animal string to our get art method to fire off the ajax request and get soem idggerence art
+	// 	bubbleApp.getPlace(userChoice);
+	// 	console.log(userOptions)
+	// })
 
 }
-
