@@ -7,7 +7,6 @@ $(function () {
 // Create app namespace to hold all methods
 const bubbleApp = {};
 bubbleApp.apiKey = 'ca6458eda70bc2879ed3d6c923ba72a4';
-bubbleApp.urlList = []
 
 bubbleApp.NorthYork = {
 	url: ["https://developers.zomato.com/api/v2.1/search?entity_id=87881&entity_type=subzone&cuisines=247", //NorthYork
@@ -41,11 +40,15 @@ bubbleApp.DundasStreetWest = {
 		"https://developers.zomato.com/api/v2.1/search?entity_id=5111&entity_type=metro&start=21&cuisines=247"]
 }
 
+bubbleApp.BloorWestVillage = {
+	url: ["https://developers.zomato.com/api/v2.1/search?entity_id=87301&entity_type=subzone&cuisines=247",
+"https://developers.zomato.com/api/v2.1/search?entity_id=87301&entity_type=subzone&start=21&cuisines=247"]
+}
+
 
 
 // bubbleApp.zones = [NorthYork, DowntownYonge];
 bubbleApp.userOptions = [];
-
 
 
 
@@ -81,6 +84,9 @@ bubbleApp.getPlace = function (userChoice) {
 	
 }
 
+bubbleApp.randomChoice = function (curatedList) {
+	bubbleApp.userOptions[Math.floor(Math.random() * bubbleApp.userOptions.length)];
+}
 
 
 bubbleApp.certainInfoOnly = function (oldList) {
@@ -96,34 +102,12 @@ bubbleApp.certainInfoOnly = function (oldList) {
 }
 
 
-// bubbleApp.getPlace = function (userChoice) {
-// 	// console.log(this.curatedList)
-// 	// possibilities = [];
-// 	//console.log('boop')
-// 	for (i = 0; i < (bubbleApp.userOptions).length; i++) {
-// 		//		console.log(bubbleApp.bbtList[i].name);
-// 		//		console.log(bubbleApp.bbtList[i].locality.length);
-// 		for (a = 0; a < bubbleApp.userOptions[i].locality.length; a++) {
-// 			// console.log(bubbleApp.curatedList[i].locality[a])
-// 			if (bubbleApp.userOptions[i].locality[a] == userChoice) {
-// 				// console.log(bubbleApp.curatedList[i])
-// 				// console.log(bubbleApp.curatedList[i].name)
-// 				// possibilities.push('boop')
-// 				// console.log(bubbleApp.curatedList[i].address)
-// 			}
-// 		}
-// 	};
-// 	console.log(this.userOptions)
-
-
-// }
-
-
 
 
 bubbleApp.init = function () {
 	// bubbleApp.getInfo();
 	bubbleApp.listenForChange();
+	bubbleApp.randomChoice(bubbleApp.userOptions)
 	// bubbleApp.getPlace()
 }
 
@@ -134,6 +118,7 @@ bubbleApp.listenForChange = function () {
 		console.log(userChoice)
 		// pass this animal string to our get art method to fire off the ajax request and get soem idggerence art
 		bubbleApp.getPlace(userChoice);
+		console.log(userOptions)
 	})
 
 }
