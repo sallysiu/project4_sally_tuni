@@ -1,0 +1,47 @@
+.carousel {
+    width: 100%;
+    margin: 30px auto;
+    &__cell {
+        width: 50%;
+        height: 350px;
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;	
+        justify-content: flex-end;
+        align-items: flex-end;        
+        padding: 30px;        
+        &--background1 {
+            background: url(../assets/temporaryBkgd.jpg);
+            background-size: cover;
+            background-repeat: no-repeat; 
+        };
+        &--background2 {
+            @extend .carousel__cell--background1;
+        };
+        &--background3 {
+            @extend .carousel__cell--background1;
+        };
+        &--background4 {
+            @extend .carousel__cell--background1;;
+        };
+        &--background5 {
+            @extend .carousel__cell--background1;
+        };
+        &--background6 {
+            @extend .carousel__cell--background1;
+        };
+        &--background7 {
+            @extend .carousel__cell--background1;
+        };
+        &--background8 {
+            @extend .carousel__cell--background1;
+        };
+    }
+    &__imageContainer {
+        max-width: 100px;
+    }
+    &__zone {
+        @include heading(30);
+    }
+    
+}

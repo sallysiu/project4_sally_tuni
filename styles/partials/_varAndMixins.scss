@@ -1,18 +1,17 @@
-// $text: ;
-// $background: ;
-// $color: ;
-// $colorSecondary: ;
-// $colorAccent: ;
+$text: #28333c;
+$background: #ecedf5;
+$color: #a7bed3;
+$colorSecondary: #d1dede;
+$colorAccent: #f4818b;
 
-// $fontSize: 20;
-// $fontFamily: ;
-// $fontFamilySecondary: ;
+$fontSize: 20;
+$fontFamily: 'Open Sans', sans-serif;
+$fontFamilySecondary: 'Coiny', cursive;
 
-// @mixin heading($fontSizeHeading) { 
-//     font-size: ($fontSizeHeading / 10) * 1rem;    
-//     font-weight: 700;
-//     letter-spacing: 1px;
-//     text-transform: ;
-//     margin: 0;
-//     padding: 0;
-// }
+@mixin heading($fontSizeHeading) { 
+    font-size: ($fontSizeHeading / 10) * 1rem; 
+    font-family: $fontFamilySecondary;   
+    letter-spacing: 0px;
+    margin: 0;
+    padding: 0;
+}

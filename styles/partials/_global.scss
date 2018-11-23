@@ -3,10 +3,9 @@ html {
 }
 
 body {
-    // CHANGE ACCORDING TO VISUAL IDENTITY
-    // font-size: ($fontSize / 10) * 1rem;    
-    // font-family: $fontFamily;
-    // color: $text;  
+    font-size: ($fontSize / 10) * 1rem;    
+    font-family: $fontFamily;
+    color: $text;  
     font-weight: 400;
 }
 
@@ -17,7 +16,7 @@ p {
 }
 
 a {
-    // color: $text;    
+    color: $text;    
     text-decoration: none; 
     margin: 0;  
     padding: 10px;
@@ -43,6 +42,6 @@ img {
 }
 
 .wrapper {
-    // width: ;
+    width: 80%;
     margin: 0 auto;
 }

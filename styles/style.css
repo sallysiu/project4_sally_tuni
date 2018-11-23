@@ -159,6 +159,9 @@ html {
   font-size: 62.5%; }
 
 body {
+  font-size: 2rem;
+  font-family: "Open Sans", sans-serif;
+  color: #28333c;
   font-weight: 400; }
 
 p {
@@ -166,6 +169,7 @@ p {
   padding: 0; }
 
 a {
+  color: #28333c;
   text-decoration: none;
   margin: 0;
   padding: 10px;
@@ -187,7 +191,42 @@ img {
   padding: 0; }
 
 .wrapper {
+  width: 80%;
   margin: 0 auto; }
+
+.carousel {
+  width: 100%;
+  margin: 30px auto; }
+  .carousel__cell {
+    width: 50%;
+    height: 350px;
+    margin-right: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    padding: 30px; }
+    .carousel__cell--background1, .carousel__cell--background2, .carousel__cell--background3, .carousel__cell--background4, .carousel__cell--background5, .carousel__cell--background6, .carousel__cell--background7, .carousel__cell--background8 {
+      background: url(../assets/temporaryBkgd.jpg);
+      background-size: cover;
+      background-repeat: no-repeat; }
+  .carousel__imageContainer {
+    max-width: 100px; }
+  .carousel__zone {
+    font-size: 3rem;
+    font-family: "Coiny", cursive;
+    letter-spacing: 0px;
+    margin: 0;
+    padding: 0; }
 
 /* Landscape tablet and laptops*/
 /* Portrait tablet and small desktops */

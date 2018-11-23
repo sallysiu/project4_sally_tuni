@@ -25,7 +25,8 @@
 	<link type="image/png" href="assets/favicon.png" rel="icon">
 	<link rel="apple-touch-icon" href="assets/appleIcon.png">
 	<!-- Font awesome (if needed) - get the new link just in case -->
-	<!-- Google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Coiny|Open+Sans:400,600" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 	<!-- animation library (if needed) -->
 	<link rel="stylesheet" href="styles/style.css">	
 </head>
@@ -55,120 +56,75 @@
 				<!-- CAROUSEL START -->
 				<div class="areas__carousel carousel">
 					<!-- Yonge Street -->
-					<div class="carousel__cell" value="YongeStreet">
+					<div class="carousel__cell carousel__cell--background1" value="YongeStreet">
+						<div class="carousel__imageContainer">
+							<img src="assets/temporaryBobaIcon.png" alt="" class="carousel__image">
+						</div>
 
-							<div class="carousel__imageContainer">
-								<img class="carousel__image" src="" alt="">
-							</div>
-
-						<h3 class="carousel__heading">Area Name</h3>
-						
-						<!-- CHECK ANOTHER WAY OF CREDITING - FOOTER? -->
-						<p class="carousel__credit">Image source</p>
+						<h3 class="carousel__zone">Yonge Street</h3>
 					</div>
 
 					<!-- Downtown Yonge -->
-					<div class="carousel__cell" value="DowntownYonge">
-					
+					<div class="carousel__cell carousel__cell--background2" value="DowntownYonge">
 						<div class="carousel__imageContainer">
-							<img class="carousel__image" src="" alt="">
+							<img src="assets/temporaryBobaIcon.png" alt="" class="carousel__image">
 						</div>
-					
-						<h3 class="carousel__heading">Area Name</h3>
-					
-						<!-- CHECK ANOTHER WAY OF CREDITING - FOOTER? -->
-						<p class="carousel__credit">Image source</p>
+
+						<h3 class="carousel__zone">Downtown Yonge</h3>
 					</div>
 
 					<!-- Harbord Village -->
-					<div class="carousel__cell" value="HarbordVillage">
-					
+					<div class="carousel__cell carousel__cell--background3" value="HarbordVillage">
 						<div class="carousel__imageContainer">
-							<img class="carousel__image" src="" alt="">
+							<img src="assets/temporaryBobaIcon.png" alt="" class="carousel__image">
 						</div>
-					
-						<h3 class="carousel__heading">Area Name</h3>
-					
-						<!-- CHECK ANOTHER WAY OF CREDITING - FOOTER? -->
-						<p class="carousel__credit">Image source</p>
+
+						<h3 class="carousel__zone">Harbord Village</h3>
 					</div>
 
 					<!-- Kensington-Chinatown -->
-					<div class="carousel__cell" value="KensingtonChinatown">
-					
+					<div class="carousel__cell carousel__cell--background4" value="KensingtonChinatown">
 						<div class="carousel__imageContainer">
-							<img class="carousel__image" src="" alt="">
+							<img src="assets/temporaryBobaIcon.png" alt="" class="carousel__image">
 						</div>
-					
-						<h3 class="carousel__heading">Area Name</h3>
-					
-						<!-- CHECK ANOTHER WAY OF CREDITING - FOOTER? -->
-						<p class="carousel__credit">Image source</p>
+
+						<h3 class="carousel__zone">Kensington-Chinatown</h3>
 					</div>
 
 					<!-- North York -->
-					<div class="carousel__cell" value="NorthYork">
-					
+					<div class="carousel__cell carousel__cell--background5" value="NorthYork">
 						<div class="carousel__imageContainer">
-							<img class="carousel__image" src="" alt="">
+							<img src="assets/temporaryBobaIcon.png" alt="" class="carousel__image">
 						</div>
-					
-						<h3 class="carousel__heading">Area Name</h3>
-					
-						<!-- CHECK ANOTHER WAY OF CREDITING - FOOTER? -->
-						<p class="carousel__credit">Image source</p>
+
+						<h3 class="carousel__zone">North York</h3>
 					</div>
 
 					<!-- Bloor West Village -->
-					<!-- <div class="carousel__cell" value="BloorWestVillage">
-					
+					<div class="carousel__cell carousel__cell--background6" value="BloorWestVillage">
 						<div class="carousel__imageContainer">
-							<img class="carousel__image" src="" alt="">
+							<img src="assets/temporaryBobaIcon.png" alt="" class="carousel__image">
 						</div>
-					
-						<h3 class="carousel__heading">Area Name</h3>
-					
-						CHECK ANOTHER WAY OF CREDITING - FOOTER?
-						<p class="carousel__credit">Image source</p>
-					</div> -->
 
-					<!-- Spadina Ave -->
-					<!-- <div class="carousel__cell" value="SpadinaAve">
-					
-						<div class="carousel__imageContainer">
-							<img class="carousel__image" src="" alt="">
-						</div>
-					
-						<h3 class="carousel__heading">Area Name</h3>
-					
-						CHECK ANOTHER WAY OF CREDITING - FOOTER?
-						<p class="carousel__credit">Image source</p>
-					</div> -->
+						<h3 class="carousel__zone">Bloor West Village</h3>
+					</div>
 
 					<!-- Richmond Hill -->
-					<div class="carousel__cell" value="RichmondHill">
-					
+					<div class="carousel__cell carousel__cell--background7" value="RichmondHill">
 						<div class="carousel__imageContainer">
-							<img class="carousel__image" src="" alt="">
+							<img src="assets/temporaryBobaIcon.png" alt="" class="carousel__image">
 						</div>
-					
-						<h3 class="carousel__heading">Area Name</h3>
-					
-						<!-- CHECK ANOTHER WAY OF CREDITING - FOOTER? -->
-						<p class="carousel__credit">Image source</p>
+
+						<h3 class="carousel__zone">Richmond Hill</h3>
 					</div>
 
 					<!-- Dundas Street West -->
-					<div class="carousel__cell" value="DundasStreetWest">
-					
+					<div class="carousel__cell carousel__cell--background8" value="DundasStreetWest">
 						<div class="carousel__imageContainer">
-							<img class="carousel__image" src="" alt="">
+							<img src="assets/temporaryBobaIcon.png" alt="" class="carousel__image">
 						</div>
-					
-						<h3 class="carousel__heading">Area Name</h3>
-					
-						<!-- CHECK ANOTHER WAY OF CREDITING - FOOTER? -->
-						<p class="carousel__credit">Image source</p>
+						
+						<h3 class="carousel__zone">Dundas Street West</h3>
 					</div>					
 				</div>
 				<!-- CAROUSEL END -->
@@ -213,7 +169,23 @@
 	- STYLIZE -->
 
 	<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
 	<script src="scripts/script.js"></script>
+
+	<script>
+
+		$(function () {
+			$(".carousel").flickity({
+				freeScroll: true,
+				wrapAround: true,
+				accessibility: true,
+				resize: true
+			});
+		});
+	
+	</script>
 
 </body>
 </html>
