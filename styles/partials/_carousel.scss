@@ -53,6 +53,10 @@
     &__zone {
         @include heading(36);
     }
+    &__image {
+        fill: $text;
+        width: 65px;
+    }
     
 }
 
