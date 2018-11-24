@@ -30,21 +30,22 @@
             background-repeat: no-repeat; 
         };
         &--background4 {            
-            background: url(../assets/background4.jpg);
-            background-size: cover;
-            background-repeat: no-repeat; 
-        };
-        &--background5 {
             @extend .carousel__cell--background1;
         };
-        &--background6 {
+        &--background5 {
             @extend .carousel__cell--background2;
         };
-        &--background7 {
+        &--background6 {
             @extend .carousel__cell--background3;
         };
+        &--background7 {
+            @extend .carousel__cell--background1;
+        };
         &--background8 {
-            @extend .carousel__cell--background4;
+            @extend .carousel__cell--background2;
+        };
+        &--background9 {
+            @extend .carousel__cell--background3;
         };
     }
     &__imageContainer {
