@@ -1,6 +1,6 @@
 .carousel {
     width: 100%;
-    margin: 30px auto;
+    margin: 30px auto;    
     &__cell {
         width: 50%;
         height: 350px;
@@ -11,30 +11,36 @@
         align-items: flex-end;        
         padding: 30px;        
         &--background1 {
-            background: url(../assets/temporaryBkgd.jpg);
+            background: url(../assets/background1.jpg);
             background-size: cover;
             background-repeat: no-repeat; 
         };
-        &--background2 {
-            @extend .carousel__cell--background1;
+        &--background2 {            
+            background: url(../assets/background2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat; 
         };
-        &--background3 {
-            @extend .carousel__cell--background1;
+        &--background3 {            
+            background: url(../assets/background3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat; 
         };
-        &--background4 {
-            @extend .carousel__cell--background1;;
+        &--background4 {            
+            background: url(../assets/background4.jpg);
+            background-size: cover;
+            background-repeat: no-repeat; 
         };
         &--background5 {
             @extend .carousel__cell--background1;
         };
         &--background6 {
-            @extend .carousel__cell--background1;
+            @extend .carousel__cell--background2;
         };
         &--background7 {
-            @extend .carousel__cell--background1;
+            @extend .carousel__cell--background3;
         };
         &--background8 {
-            @extend .carousel__cell--background1;
+            @extend .carousel__cell--background4;
         };
     }
     &__imageContainer {
@@ -44,4 +50,32 @@
         @include heading(30);
     }
     
+}
+
+// FLICKITY STYLES
+.flickity-button {
+  background: transparent;
+}
+.flickity-prev-next-button {
+  width: 75px;
+  height: 75px;
+}
+
+.flickity-button-icon {
+  fill: $colorAccent;
+}
+
+.flickity-button:hover {
+  background: $backgroundAlpha;
+}
+
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: $color;
+}
+
+.flickity-page-dots .dot.is-selected {
+  background: $colorAccent;
 }

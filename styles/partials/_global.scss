@@ -7,10 +7,11 @@ body {
     font-family: $fontFamily;
     color: $text;  
     font-weight: 400;
+    background: $background;
 }
 
 p {
-    // line-height: ;
+    line-height: 20px;
     margin: 0;
     padding: 0;
 }
