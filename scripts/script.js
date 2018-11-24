@@ -65,10 +65,11 @@ bubbleApp.userOptions = [];
 // Collect input from all
 bubbleApp.getPlace = function (userChoice) {
 	bubbleApp.userOptions = [];
+	const promiseArray = [];
 	
 	for (i = 0; i < bubbleApp[userChoice].url.length; i++) {
 		// console.log(bubbleApp[userChoice].url[i])
-		$.ajax({
+		const promise = $.ajax({
 			url: bubbleApp[userChoice].url[i],
 			headers: {
 				"user-key": "ca6458eda70bc2879ed3d6c923ba72a4"
@@ -79,23 +80,34 @@ bubbleApp.getPlace = function (userChoice) {
 				city_id: 89,
 				cuisines: 247,
 			}
-		}).then((res) => {
-			// console.log(res);
-			bubbleApp.foundPlaces = res.restaurants;
-			// console.log(bubbleApp.foundPlaces)
-			bubbleApp.certainInfoOnly(bubbleApp.foundPlaces)
+		})
+		promiseArray.push(promise)
+		// .then((res) => {
+		// 	// console.log(res);
+		// 	bubbleApp.foundPlaces = res.restaurants;
+		// 	// console.log(bubbleApp.foundPlaces)
+		// 	bubbleApp.certainInfoOnly(bubbleApp.foundPlaces)
 
-		});
-
+		// });
 	}
+	// console.log(promiseArray)
+	bubbleApp.foundPlaces = [];
 
+	$.when(...promiseArray).then(function(...res) {
+		res.forEach(function (successObject) {
+			bubbleApp.foundPlaces.push(...successObject[0].restaurants)
+		})
+		// console.log(bubbleApp.foundPlaces)
+		bubbleApp.certainInfoOnly(bubbleApp.foundPlaces)
 
-	console.log(bubbleApp.userOptions)
+	})
+
 	
 }
 
 bubbleApp.randomChoice = function (curatedList) {
-	bubbleApp.userOptions[Math.floor(Math.random() * bubbleApp.userOptions.length)];
+	let randomLocation = curatedList[Math.floor(Math.random() * curatedList.length)];
+	console.log(randomLocation)
 }
 
 
@@ -108,7 +120,8 @@ bubbleApp.certainInfoOnly = function (oldList) {
 		resObject.cuisine = place.restaurant.cuisines;
 		bubbleApp.userOptions.push(resObject);
 	});
-	// console.log(bubbleApp.userOptions)
+	// console.log(bubbleApp.userOptions);
+	bubbleApp.randomChoice(bubbleApp.userOptions)
 }
 
 
@@ -118,7 +131,6 @@ bubbleApp.init = function () {
 	// bubbleApp.getInfo();
 	bubbleApp.listenForChange();
 
-	// bubbleApp.randomChoice(bubbleApp.userOptions)
 	// bubbleApp.getPlace()
 }
 
@@ -127,7 +139,7 @@ bubbleApp.listenForChange = function () {
 	$(".carousel__cell").on("click", function () {
 		// console.log(this.getAttribute('value'));
 		const userChoice = this.getAttribute('value');
-		console.log(userChoice)
+		// console.log(userChoice)
 		bubbleApp.getPlace(userChoice);
 		// console.log(userOptions)
 
