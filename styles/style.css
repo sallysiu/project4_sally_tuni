@@ -186,12 +186,6 @@ li {
   margin: 0;
   padding: 0; }
 
-img {
-  max-width: 100%;
-  display: block;
-  margin: 0;
-  padding: 0; }
-
 .header {
   background: #4b5b86;
   height: 60vh; }
@@ -268,6 +262,9 @@ img {
     margin: 0;
     padding: 0;
     line-height: 66px; }
+  .carousel__image {
+    fill: #4b5b86;
+    width: 65px; }
 
 .flickity-button {
   background: transparent; }
@@ -293,7 +290,8 @@ img {
 
 .transition {
   padding: 100px 0;
-  background: #f4818b; }
+  background: #f4818b;
+  display: none; }
   .transition__imageContainer {
     max-width: 200px;
     width: 20%;
@@ -305,7 +303,8 @@ img {
     color: #ecedf5; }
 
 .result {
-  padding: 100px 0; }
+  padding: 100px 0;
+  display: none; }
   .result__place {
     font-size: 6rem;
     font-family: "Coiny", cursive;
