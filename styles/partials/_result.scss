@@ -1,5 +1,6 @@
 .result {
     padding: 100px 0;
+    display: none;
     &__place {
         @include heading(60);
     }    
