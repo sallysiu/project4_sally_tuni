@@ -8,6 +8,12 @@ $(function () {
 		accessibility: true,
 		resize: true
 	});
+
+
+
+
+
+
 });
 
 
@@ -113,7 +119,12 @@ bubbleApp.randomChoice = function (curatedList) {
 	$('.result__place').html(`<h2>${randomLocation.name}</h2>`)
 	$('.result__address').html(`<p>${randomLocation.address}</p>`)
 	$('.result__cuisine').html(`<p>Cuisine found here:<br> ${randomLocation.cuisine}</p>`)
-}
+
+
+	
+
+
+};
 
 
 bubbleApp.certainInfoOnly = function (oldList) {
@@ -127,6 +138,13 @@ bubbleApp.certainInfoOnly = function (oldList) {
 	});
 	// console.log(bubbleApp.userOptions);
 	bubbleApp.randomChoice(bubbleApp.userOptions)
+
+	$.smoothScroll({
+		autoFocus: true,
+		scrollTarget: $(".result"),
+	});
+
+
 }
 
 
