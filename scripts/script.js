@@ -2,9 +2,11 @@
 $(function () {
 	bubbleApp.init()
 
-	$(".main-carousel").flickity({
+	$(".carousel").flickity({
 		freeScroll: true,
-		wrapAround: true
+		wrapAround: true,
+		accessibility: true,
+		resize: true
 	});
 });
 
