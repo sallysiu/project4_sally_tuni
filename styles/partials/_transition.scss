@@ -1,0 +1,15 @@
+.transition {
+    padding: 100px 0;
+    background: $colorAccent;
+    &__imageContainer {
+        max-width: 200px;
+        width: 20%;
+        margin: 0 auto 50px auto;
+    }
+    &__icon {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        color: $background;
+    }
+}

@@ -1,18 +1,20 @@
-// $text: ;
-// $background: ;
-// $color: ;
-// $colorSecondary: ;
-// $colorAccent: ;
+$text: #4b5b86;
+$background: #ecedf5;
+$backgroundAlpha: rgba(236, 237, 245, 0.5);
+$color: #a7bed3;
+$colorAlpha: rgba(141, 171, 198, 0.5);
+$colorSecondary: #ccd7e4;
+$colorAccent: #f4818b;
 
-// $fontSize: 20;
-// $fontFamily: ;
-// $fontFamilySecondary: ;
+$fontSize: 20;
+$fontFamily: 'Open Sans', sans-serif;
+$fontFamilySecondary: 'Coiny', cursive;
 
-// @mixin heading($fontSizeHeading) { 
-//     font-size: ($fontSizeHeading / 10) * 1rem;    
-//     font-weight: 700;
-//     letter-spacing: 1px;
-//     text-transform: ;
-//     margin: 0;
-//     padding: 0;
-// }
+@mixin heading($fontSizeHeading) { 
+    font-size: ($fontSizeHeading / 10) * 1rem; 
+    font-family: $fontFamilySecondary;   
+    letter-spacing: 0px;
+    margin: 0;
+    padding: 0;
+    line-height: ($fontSizeHeading + 30) * 1px;
+}

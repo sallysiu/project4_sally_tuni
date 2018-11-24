@@ -1,0 +1,8 @@
+.result {
+    padding: 100px 0;
+    &__place {
+        @include heading(60);
+    }    
+}
+
+

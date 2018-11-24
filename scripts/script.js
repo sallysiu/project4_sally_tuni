@@ -1,6 +1,11 @@
 
 $(function () {
 	bubbleApp.init()
+
+	$(".main-carousel").flickity({
+		freeScroll: true,
+		wrapAround: true
+	});
 });
 
 

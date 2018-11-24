@@ -3,21 +3,21 @@ html {
 }
 
 body {
-    // CHANGE ACCORDING TO VISUAL IDENTITY
-    // font-size: ($fontSize / 10) * 1rem;    
-    // font-family: $fontFamily;
-    // color: $text;  
+    font-size: ($fontSize / 10) * 1rem;    
+    font-family: $fontFamily;
+    color: $text;  
     font-weight: 400;
+    background: $background;
 }
 
 p {
-    // line-height: ;
-    margin: 0;
+    line-height: 28px;
+    margin: 0 0 20px 0;
     padding: 0;
 }
 
 a {
-    // color: $text;    
+    color: $text;    
     text-decoration: none; 
     margin: 0;  
     padding: 10px;
@@ -40,9 +40,4 @@ img {
     display: block;
     margin: 0;
     padding: 0;    
-}
-
-.wrapper {
-    // width: ;
-    margin: 0 auto;
 }
