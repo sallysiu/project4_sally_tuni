@@ -126,9 +126,9 @@ bubbleApp.certainInfoOnly = function (oldList) {
 	bubbleApp.randomChoice(bubbleApp.userOptions);
 
 
-	// $(".transition").css("display", "block");
-	// $(".result").css("display", "block");
-	// $(".footer").css("display", "block");
+	$(".transition").css("display", "block");
+	$(".result").css("display", "block");
+	$(".footer").css("display", "block");
 
 
 	$.smoothScroll({
