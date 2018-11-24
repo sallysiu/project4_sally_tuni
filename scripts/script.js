@@ -45,7 +45,8 @@ bubbleApp.KensingtonChinatown = {
 }
 
 bubbleApp.RichmondHill = {
-	url: ["https://developers.zomato.com/api/v2.1/search?entity_id=87981&entity_type=subzone&cuisines=247"]
+	url: ["https://developers.zomato.com/api/v2.1/search?entity_id=87981&entity_type=subzone&count=5&cuisines=247", 
+	"https://developers.zomato.com/api/v2.1/search?entity_id=87981&entity_type=subzone&start=6&cuisines=247"]
 }
 
 bubbleApp.DundasStreetWest = {
@@ -88,9 +89,10 @@ bubbleApp.getPlace = function (userChoice) {
 	}
 	// console.log(promiseArray)
 	bubbleApp.foundPlaces = [];
-
+	
 	$.when(...promiseArray).then(function(...res) {
 		res.forEach(function (successObject) {
+
 			bubbleApp.foundPlaces.push(...successObject[0].restaurants)
 		})
 		// console.log(bubbleApp.foundPlaces)
@@ -103,9 +105,9 @@ bubbleApp.getPlace = function (userChoice) {
 bubbleApp.randomChoice = function (curatedList) {
 	let randomLocation = curatedList[Math.floor(Math.random() * curatedList.length)];
 	// console.log(randomLocation)
-	$('.result__place').html(`${randomLocation.name}`)
-	$('.result__address').html(`${randomLocation.address}`)
-	$('.result__cuisine').html(`Cuisine found here:<br> ${randomLocation.cuisine}`)
+	$('.result__place').text(`${randomLocation.name}`)
+	$('.result__address').text(`${randomLocation.address}`)
+	$('.result__cuisine').text(`Cuisine found here: ${randomLocation.cuisine}`)
 
 };
 
@@ -142,6 +144,7 @@ bubbleApp.listenForChoice = function () {
 	$(".carousel__cell").on("click", function () {
 		// console.log(this.getAttribute('value'));
 		const userChoice = this.getAttribute('value');
+
 		// console.log(userChoice)
 		bubbleApp.getPlace(userChoice);
 		// console.log(userOptions)
