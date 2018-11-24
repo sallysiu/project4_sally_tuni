@@ -161,17 +161,17 @@ html {
 body {
   font-size: 2rem;
   font-family: "Open Sans", sans-serif;
-  color: #28333c;
+  color: #4b5b86;
   font-weight: 400;
   background: #ecedf5; }
 
 p {
-  line-height: 20px;
-  margin: 0;
+  line-height: 28px;
+  margin: 0 0 20px 0;
   padding: 0; }
 
 a {
-  color: #28333c;
+  color: #4b5b86;
   text-decoration: none;
   margin: 0;
   padding: 10px;
@@ -192,6 +192,18 @@ img {
   margin: 0;
   padding: 0; }
 
+.header {
+  background: #4b5b86;
+  height: 60vh; }
+  .header__heading {
+    font-size: 10rem;
+    font-family: "Coiny", cursive;
+    letter-spacing: 0px;
+    margin: 0;
+    padding: 0;
+    line-height: 130px;
+    color: #ecedf5; }
+
 .wrapper {
   width: 80%;
   margin: 0 auto; }
@@ -199,6 +211,13 @@ img {
 .areas {
   background: #ccd7e4;
   padding: 100px 0; }
+  .areas__heading {
+    font-size: 6rem;
+    font-family: "Coiny", cursive;
+    letter-spacing: 0px;
+    margin: 0;
+    padding: 0;
+    line-height: 90px; }
 
 .carousel {
   width: 100%;
@@ -224,7 +243,10 @@ img {
     .carousel__cell--background1, .carousel__cell--background5 {
       background: url(../assets/background1.jpg);
       background-size: cover;
-      background-repeat: no-repeat; }
+      background-repeat: no-repeat;
+      -webkit-transition: background 500ms;
+      -o-transition: background 500ms;
+      transition: background 500ms; }
     .carousel__cell--background2, .carousel__cell--background6 {
       background: url(../assets/background2.jpg);
       background-size: cover;
@@ -240,11 +262,12 @@ img {
   .carousel__imageContainer {
     max-width: 100px; }
   .carousel__zone {
-    font-size: 3rem;
+    font-size: 3.6rem;
     font-family: "Coiny", cursive;
     letter-spacing: 0px;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    line-height: 66px; }
 
 .flickity-button {
   background: transparent; }
@@ -267,6 +290,59 @@ img {
 
 .flickity-page-dots .dot.is-selected {
   background: #f4818b; }
+
+.transition {
+  padding: 100px 0;
+  background: #f4818b; }
+  .transition__imageContainer {
+    max-width: 200px;
+    width: 20%;
+    margin: 0 auto 50px auto; }
+  .transition__icon {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    color: #ecedf5; }
+
+.result {
+  padding: 100px 0; }
+  .result__place {
+    font-size: 6rem;
+    font-family: "Coiny", cursive;
+    letter-spacing: 0px;
+    margin: 0;
+    padding: 0;
+    line-height: 90px; }
+
+.footer {
+  background: #4b5b86;
+  color: #ecedf5;
+  padding: 30px 0; }
+  .footer__text {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 10px; }
+  .footer__link {
+    color: #ecedf5;
+    padding: 0;
+    display: inline;
+    -webkit-transition: color 300ms;
+    -o-transition: color 300ms;
+    transition: color 300ms; }
+    .footer__link:hover {
+      color: #f4818b; }
+  .footer__credits {
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .footer__unsplashLink {
+    margin: 0 5px; }
 
 /* Landscape tablet and laptops*/
 /* Portrait tablet and small desktops */

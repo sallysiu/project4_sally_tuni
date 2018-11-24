@@ -9,11 +9,15 @@
         flex-direction: column;	
         justify-content: flex-end;
         align-items: flex-end;        
-        padding: 30px;        
+        padding: 30px;
+        &:hover {
+            // ADD ANIMATION
+        }
         &--background1 {
             background: url(../assets/background1.jpg);
             background-size: cover;
             background-repeat: no-repeat; 
+            transition: background 500ms;            
         };
         &--background2 {            
             background: url(../assets/background2.jpg);
@@ -47,7 +51,7 @@
         max-width: 100px;
     }
     &__zone {
-        @include heading(30);
+        @include heading(36);
     }
     
 }

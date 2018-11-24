@@ -1,0 +1,8 @@
+.header {
+    background: $text;
+    height: 60vh;
+    &__heading {
+        @include heading(100);
+        color: $background;
+    }
+}

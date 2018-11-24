@@ -24,7 +24,8 @@
 	<!-- favicon and appleicon -->
 	<link type="image/png" href="assets/favicon.png" rel="icon">
 	<link rel="apple-touch-icon" href="assets/appleIcon.png">
-	<!-- Font awesome (if needed) - get the new link just in case -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+	 crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Coiny|Open+Sans:400,600" rel="stylesheet">
 	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 	<!-- animation library (if needed) -->
@@ -51,7 +52,9 @@
 			<div class="areas__wrapper wrapper">
 				<h2 class="areas__heading">Areas</h2>
 
-				<p class="areas__text">Instructions/Info</p>
+				<p class="areas__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptate dolor ab impedit neque aperiam possimus sapiente autem, repellendus soluta molestiae quasi ratione reprehenderit accusamus aut minima! Doloribus, est minima! lorem</p>
+
+				<p class="areas__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias ullam officia totam, odit hic commodi ea illum temporibus ipsum eaque architecto obcaecati quo quia quis autem repellendus perspiciatis provident nihil voluptatibus qui minima? Modi veritatis quaerat molestiae et! Sapiente ratione fugiat doloremque nemo quos voluptatum saepe quae. Expedita, ipsa sequi.</p>
 
 				<!-- CAROUSEL START -->
 				<div class="areas__carousel carousel">
@@ -132,12 +135,29 @@
 		</section>
 		<!-- AREAS END -->
 
+		<!-- BLOCK ACCESS TO THIS AREA BEFORE USER INPUT -->
+		<!-- display: none; to display: block w/ toggle class? -->
+
+		<!-- TRANSITION START -->
+		<section class="transition">
+		<!-- ANIMATION -->
+			<div class="transition__imageContainer">
+				<img src="assets/temporaryPlaceIcon.png" alt="" class="transition__image">
+			</div>
+			
+			<i class="fas fa-angle-double-down fa-3x transition__icon"></i>
+		</section>
+		<!-- TRANSTION END -->
+		
 		<!-- RESULT START -->
 		<section class="result">
 			<div class="result__wrapper wrapper">
 				<h2 class="result__place">Name of Place</h2>
 
-				<p class="result__address">Info about place</p>
+				<p class="result__address">483 Queen St W, Toronto ON M5V 2A9</p>
+
+				<!-- DISPLAY ON MAP -->
+
 				<p class="result__cuisine">cusisine Info </p>
 
 				<!-- RESULT BUTTONS START -->
@@ -159,49 +179,57 @@
 
 	<!-- FOOTER START -->
 	<footer class="footer">
-		<p class="footer__text"></p>
+		<p class="footer__text">Developed by <a href="https://www.sallysiu.com/" class="footer__link" target="_blank">Sally Siu</a> and <a href="http://tuni.tech/" class="footer__link" target="_blank">Tuni</a> | 2018 | All images from <a href="https://unsplash.com/" class="footer__link" target="_blank">Unsplash</a></p>
 
 		<!-- IMAGES CREDIT START -->
-		<div class="footer__credits credits">
+		<div class="footer__credits">
+			<div class="footer__unsplashLink">
+				<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
+				href="https://unsplash.com/@creativeexchange?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+				target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from The Creative Exchange"><span
+					style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white"
+						viewBox="0 0 32 32">
+							<title>unsplash-logo</title>
+							<path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path>
+						</svg></span><span style="display:inline-block;padding:2px 3px">The Creative Exchange</span></a>
+			</div>
 
-			<p class="credits__text">All images from Unsplash:</p>
+			<div class="footer__unsplashLink">
+				<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
+				href="https://unsplash.com/@ninjason?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+				target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Jason Leung"><span
+					style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white"
+						viewBox="0 0 32 32">
+							<title>unsplash-logo</title>
+							<path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path>
+						</svg></span><span style="display:inline-block;padding:2px 3px">Jason Leung</span></a>
+			</div>
 
-			<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
-			href="https://unsplash.com/@creativeexchange?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
-			target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from The Creative Exchange"><span
-				style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white"
-					viewBox="0 0 32 32">
-						<title>unsplash-logo</title>
-						<path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path>
-					</svg></span><span style="display:inline-block;padding:2px 3px">The Creative Exchange</span></a>
+			<div class="footer__unsplashLink">
+				<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
+				href="https://unsplash.com/@greysonjoralemon?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+				target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Greyson Joralemon"><span
+					style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white"
+						viewBox="0 0 32 32">
+							<title>unsplash-logo</title>
+							<path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path>
+						</svg></span><span style="display:inline-block;padding:2px 3px">Greyson Joralemon</span></a>
+			</div>
 
-			<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
-			href="https://unsplash.com/@ninjason?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
-			target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Jason Leung"><span
-				style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white"
-					viewBox="0 0 32 32">
-						<title>unsplash-logo</title>
-						<path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path>
-					</svg></span><span style="display:inline-block;padding:2px 3px">Jason Leung</span></a>
-
-			<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
-			 href="https://unsplash.com/@greysonjoralemon?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
-			 target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Greyson Joralemon"><span
-				 style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white"
-					 viewBox="0 0 32 32">
-						<title>unsplash-logo</title>
-						<path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path>
-					</svg></span><span style="display:inline-block;padding:2px 3px">Greyson Joralemon</span></a>
-
+			<div class="footer__unsplashLink">
+				<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
+				href="https://unsplash.com/@rawpixel?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+				target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from rawpixel"><span
+					style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white"
+						viewBox="0 0 32 32">
+							<title>unsplash-logo</title>
+							<path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path>
+						</svg></span><span style="display:inline-block;padding:2px 3px">rawpixel</span></a>
+			</div>
 		</div>
 		<!-- IMAGES CREDIT END -->
 	</footer>
 	<!-- FOOTER END -->
-
-	<!-- TO DO	
-
-	- FINISH SCRIPT	
-	- STYLIZE -->
 
 	<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
 
