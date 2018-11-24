@@ -133,7 +133,7 @@ bubbleApp.certainInfoOnly = function (oldList) {
 
 	$.smoothScroll({
 		autoFocus: true,
-		speed: 900,
+		speed: 1200,
 		scrollTarget: $(".result"),
 	});
 
