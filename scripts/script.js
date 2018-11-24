@@ -103,10 +103,10 @@ bubbleApp.getPlace = function (userChoice) {
 bubbleApp.randomChoice = function (curatedList) {
 	let randomLocation = curatedList[Math.floor(Math.random() * curatedList.length)];
 	console.log(randomLocation)
-	$('.result__place').html(`<h2>${randomLocation.name}</h2>`)
-	$('.result__address').html(`<p>${randomLocation.address}</p>`)
-	$('.result__cuisine').html(`<p>Cuisine found here:<br> ${randomLocation.cuisine}</p>`)
-
+	
+	$('.result__place').text(`${randomLocation.name}`)
+	$('.result__address').text(`${randomLocation.address}`)
+	$('.result__cuisine').text(`Cuisine found here: ${randomLocation.cuisine}`)
 };
 
 
