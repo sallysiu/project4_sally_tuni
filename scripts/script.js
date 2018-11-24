@@ -18,11 +18,11 @@ bubbleApp.apiKey = 'ca6458eda70bc2879ed3d6c923ba72a4';
 
 bubbleApp.NorthYork = {
 	url: ["https://developers.zomato.com/api/v2.1/search?entity_id=87881&entity_type=subzone&cuisines=247", //NorthYork
-	"https://developers.zomato.com/api/v2.1/search?entity_id=87881&entity_type=subzone&start=21&cuisines=247" // NorthYork pt2
+	"https://developers.zomato.com/api/v2.1/search?entity_id=87881&entity_type=subzone&start=20&cuisines=247" // NorthYork pt2
 ]};
 bubbleApp.DowntownYonge = {
 	url: ["https://developers.zomato.com/api/v2.1/search?entity_id=87091&entity_type=subzone&cuisines=247", // Downtown Yonge
-		"https://developers.zomato.com/api/v2.1/search?entity_id=87091&entity_type=subzone&start=21&cuisines=247" // Downtown Yonge pt2
+		"https://developers.zomato.com/api/v2.1/search?entity_id=87091&entity_type=subzone&start=20&cuisines=247" // Downtown Yonge pt2
 	]};
 
 bubbleApp.YongeStreet = {
@@ -31,12 +31,13 @@ bubbleApp.YongeStreet = {
 };
 
 bubbleApp.Thornhill = {
-	url: ["https://developers.zomato.com/api/v2.1/search?entity_id=87971&entity_type=subzone&cuisines=247"]
+	url: ["https://developers.zomato.com/api/v2.1/search?entity_id=87971&entity_type=subzone&count=4&cuisines=247",
+	"https://developers.zomato.com/api/v2.1/search?entity_id=87971&entity_type=subzone&start=4&count=4&cuisines=247"]
 };
 
 bubbleApp.HarbordVillage = {
 	url: ["https://developers.zomato.com/api/v2.1/search?entity_id=87201&entity_type=subzone&cuisines=247",
-		"https://developers.zomato.com/api/v2.1/search?entity_id=87201&entity_type=subzone&start=21&cuisines=247"]
+	"https://developers.zomato.com/api/v2.1/search?entity_id=87201&entity_type=subzone&start=20&cuisines=247"]
 }
 
 bubbleApp.KensingtonChinatown = {
@@ -45,17 +46,18 @@ bubbleApp.KensingtonChinatown = {
 }
 
 bubbleApp.RichmondHill = {
-	url: ["https://developers.zomato.com/api/v2.1/search?entity_id=87981&entity_type=subzone&cuisines=247"]
+	url: ["https://developers.zomato.com/api/v2.1/search?entity_id=87981&entity_type=subzone&count=5&cuisines=247", 
+	"https://developers.zomato.com/api/v2.1/search?entity_id=87981&entity_type=subzone&start=5&cuisines=247"]
 }
 
 bubbleApp.DundasStreetWest = {
 	url: ["https://developers.zomato.com/api/v2.1/search?entity_id=5111&entity_type=metro&cuisines=247",
-		"https://developers.zomato.com/api/v2.1/search?entity_id=5111&entity_type=metro&start=21&cuisines=247"]
+		"https://developers.zomato.com/api/v2.1/search?entity_id=5111&entity_type=metro&start=20&cuisines=247"]
 }
 
 bubbleApp.BloorWestVillage = {
 	url: ["https://developers.zomato.com/api/v2.1/search?entity_id=87301&entity_type=subzone&cuisines=247",
-"https://developers.zomato.com/api/v2.1/search?entity_id=87301&entity_type=subzone&start=21&cuisines=247"]
+"https://developers.zomato.com/api/v2.1/search?entity_id=87301&entity_type=subzone&start=20&cuisines=247"]
 }
 
 
@@ -88,9 +90,10 @@ bubbleApp.getPlace = function (userChoice) {
 	}
 	// console.log(promiseArray)
 	bubbleApp.foundPlaces = [];
-
+	
 	$.when(...promiseArray).then(function(...res) {
 		res.forEach(function (successObject) {
+
 			bubbleApp.foundPlaces.push(...successObject[0].restaurants)
 		})
 		// console.log(bubbleApp.foundPlaces)
@@ -102,7 +105,7 @@ bubbleApp.getPlace = function (userChoice) {
 
 bubbleApp.randomChoice = function (curatedList) {
 	let randomLocation = curatedList[Math.floor(Math.random() * curatedList.length)];
-	console.log(randomLocation)
+	// console.log(randomLocation)
 	
 	$('.result__place').text(`${randomLocation.name}`)
 	$('.result__address').text(`${randomLocation.address}`)
@@ -142,6 +145,7 @@ bubbleApp.listenForChoice = function () {
 	$(".carousel__cell").on("click", function () {
 		// console.log(this.getAttribute('value'));
 		const userChoice = this.getAttribute('value');
+
 		// console.log(userChoice)
 		bubbleApp.getPlace(userChoice);
 		// console.log(userOptions)
