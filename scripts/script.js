@@ -123,7 +123,13 @@ bubbleApp.certainInfoOnly = function (oldList) {
 		bubbleApp.userOptions.push(resObject);
 	});
 	// console.log(bubbleApp.userOptions);
-	bubbleApp.randomChoice(bubbleApp.userOptions)
+	bubbleApp.randomChoice(bubbleApp.userOptions);
+
+
+	$(".transition").css("display", "block");
+	$(".result").css("display", "block");
+	$(".footer").css("display", "block");
+
 
 	$.smoothScroll({
 		autoFocus: true,
@@ -136,7 +142,9 @@ bubbleApp.certainInfoOnly = function (oldList) {
 
 
 bubbleApp.init = function () {
+
 	bubbleApp.listenForChoice();
+	
 
 }
 
