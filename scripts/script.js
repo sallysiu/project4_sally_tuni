@@ -9,11 +9,6 @@ $(function () {
 		resize: true
 	});
 
-
-
-
-
-
 });
 
 
@@ -90,13 +85,6 @@ bubbleApp.getPlace = function (userChoice) {
 			}
 		})
 		promiseArray.push(promise)
-		// .then((res) => {
-		// 	// console.log(res);
-		// 	bubbleApp.foundPlaces = res.restaurants;
-		// 	// console.log(bubbleApp.foundPlaces)
-		// 	bubbleApp.certainInfoOnly(bubbleApp.foundPlaces)
-
-		// });
 	}
 	// console.log(promiseArray)
 	bubbleApp.foundPlaces = [];
@@ -110,7 +98,6 @@ bubbleApp.getPlace = function (userChoice) {
 
 	})
 
-	
 }
 
 bubbleApp.randomChoice = function (curatedList) {
@@ -119,10 +106,6 @@ bubbleApp.randomChoice = function (curatedList) {
 	$('.result__place').html(`<h2>${randomLocation.name}</h2>`)
 	$('.result__address').html(`<p>${randomLocation.address}</p>`)
 	$('.result__cuisine').html(`<p>Cuisine found here:<br> ${randomLocation.cuisine}</p>`)
-
-
-	
-
 
 };
 
@@ -144,20 +127,17 @@ bubbleApp.certainInfoOnly = function (oldList) {
 		scrollTarget: $(".result"),
 	});
 
-
 }
 
 
 
 
 bubbleApp.init = function () {
-	// bubbleApp.getInfo();
-	bubbleApp.listenForChange();
+	bubbleApp.listenForChoice();
 
-	// bubbleApp.getPlace()
 }
 
-bubbleApp.listenForChange = function () {
+bubbleApp.listenForChoice = function () {
 	
 	$(".carousel__cell").on("click", function () {
 		// console.log(this.getAttribute('value'));
@@ -168,17 +148,16 @@ bubbleApp.listenForChange = function () {
 
 	});
 
-
-
-
-
-	// $("select").on("change", function () {
-	// 	// ..store the value of the selected option
-	// 	const userChoice = $(this).val()
-	// 	console.log(userChoice)
-	// 	// pass this animal string to our get art method to fire off the ajax request and get soem idggerence art
-	// 	bubbleApp.getPlace(userChoice);
-	// 	console.log(userOptions)
-	// })
-
 }
+
+$(".button__newPlace").on("click", function() {
+	bubbleApp.randomChoice(bubbleApp.userOptions)
+})
+
+$(".button__newArea").on("click", function() {
+	$.smoothScroll({
+		autoFocus: true,
+		scrollTarget: $(".main"),
+	});
+
+})
