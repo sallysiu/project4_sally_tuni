@@ -1,5 +1,5 @@
 .areas {
-    background: $colorSecondary;
+    background: $background;
     padding: 100px 0;
     &__heading {
         @include heading(60);

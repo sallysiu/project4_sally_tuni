@@ -150,7 +150,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   left: -1000px;
   top: 5px;
   z-index: 999;
-  padding: 10px; }
+  padding: 10px;
+  background: #ecedf5;
+  color: #4b5b86;
+  border: #4b5b86; }
 
 .skipLink:focus {
   left: 0; }
@@ -203,7 +206,7 @@ li {
   margin: 0 auto; }
 
 .areas {
-  background: #ccd7e4;
+  background: #ecedf5;
   padding: 100px 0; }
   .areas__heading {
     font-size: 6rem;
@@ -237,10 +240,7 @@ li {
     .carousel__cell--background1, .carousel__cell--background4, .carousel__cell--background7 {
       background: url(../assets/background1.jpg);
       background-size: cover;
-      background-repeat: no-repeat;
-      -webkit-transition: background 500ms;
-      -o-transition: background 500ms;
-      transition: background 500ms; }
+      background-repeat: no-repeat; }
     .carousel__cell--background2, .carousel__cell--background5, .carousel__cell--background8 {
       background: url(../assets/background2.jpg);
       background-size: cover;
@@ -285,29 +285,72 @@ li {
   background: #f4818b; }
 
 .transition {
-  padding: 100px 0;
-  background: #f4818b;
+  padding: 200px 0;
+  background: #a7bed3;
   display: none; }
-  .transition__imageContainer {
-    max-width: 200px;
-    width: 20%;
-    margin: 0 auto 50px auto; }
   .transition__icon {
     display: block;
     text-align: center;
-    margin: 0 auto;
-    color: #ecedf5; }
+    margin: 0 auto 25px auto;
+    color: #4b5b86;
+    -webkit-animation-duration: 1500ms;
+    animation-duration: 1500ms; }
 
 .result {
-  padding: 100px 0;
-  display: none; }
+  padding: 100px 0 75px 0;
+  display: none;
+  position: relative; }
   .result__place {
     font-size: 6rem;
     font-family: "Coiny", cursive;
     letter-spacing: 0px;
     margin: 0;
     padding: 0;
-    line-height: 90px; }
+    line-height: 90px;
+    margin-bottom: 30px;
+    width: 80%; }
+  .result__wrapper {
+    background: #a7bed3;
+    padding: 100px;
+    -webkit-box-shadow: -40px -40px 0 #f4818b, 20px 20px 0 #4b5b86;
+    box-shadow: -40px -40px 0 #f4818b, 20px 20px 0 #4b5b86;
+    position: relative; }
+  .result__cuisine {
+    margin-bottom: 50px;
+    width: 80%; }
+  .result__imageContainer {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    -webkit-animation-duration: 1250ms;
+    animation-duration: 1250ms;
+    -webkit-animation-delay: 1500ms;
+    animation-delay: 1500ms; }
+  .result__image {
+    display: block;
+    width: 150px;
+    margin: 0 auto 50px auto; }
+
+.button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  width: 280px;
+  background: #4b5b86;
+  color: #a7bed3;
+  padding: 10px;
+  -webkit-transition: color 300ms ease-in, background 300ms ease-in, -webkit-box-shadow 300ms ease-in;
+  transition: color 300ms ease-in, background 300ms ease-in, -webkit-box-shadow 300ms ease-in;
+  -o-transition: color 300ms ease-in, background 300ms ease-in, box-shadow 300ms ease-in;
+  transition: color 300ms ease-in, background 300ms ease-in, box-shadow 300ms ease-in;
+  transition: color 300ms ease-in, background 300ms ease-in, box-shadow 300ms ease-in, -webkit-box-shadow 300ms ease-in;
+  margin-right: 20px; }
+  .button:hover {
+    color: #4b5b86;
+    background: #f4818b;
+    -webkit-box-shadow: 10px 10px 0 #4b5b86;
+    box-shadow: 10px 10px 0 #4b5b86; }
 
 .footer {
   background: #4b5b86;

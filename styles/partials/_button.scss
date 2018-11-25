@@ -1,0 +1,17 @@
+.button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none; 
+    width: 280px;
+    background: $text;
+    color: $color;
+    padding: 10px;
+    transition: color 300ms ease-in, background 300ms ease-in, box-shadow 300ms ease-in;
+    margin-right: 20px;
+    &:hover {
+        color: $text;
+        background: $colorAccent;
+        box-shadow: 10px 10px 0 $text;
+    }
+}

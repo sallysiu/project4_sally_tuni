@@ -23,10 +23,9 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
     top: 5px;
     z-index: 999;    
     padding: 10px;
-    // CHANGE ACCORDING TO VISUAL IDENTITY
-    // background: ;
-    // color: ;
-    // border: ;
+    background: $background;
+    color: $text;
+    border: $text;
 }
 
 .skipLink:focus {

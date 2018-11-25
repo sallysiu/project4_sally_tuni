@@ -28,7 +28,7 @@
 	 crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Coiny|Open+Sans:400,600" rel="stylesheet">
 	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-	<!-- animation library (if needed) -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 	<link rel="stylesheet" href="styles/style.css">	
 </head>
 <body>
@@ -61,7 +61,7 @@
 					<!-- Yonge Street -->
 					<div class="carousel__cell carousel__cell--background1" value="YongeStreet">
 						<div class="carousel__imageContainer">
-							<img src="assets/boba.svg" alt="" class="carousel__image">
+							<img src="assets/boba.svg" alt="stylized icon of a bubble tea cup" class="carousel__image">
 						</div>
 
 						<h3 class="carousel__zone">Yonge Street</h3>
@@ -70,7 +70,7 @@
 					<!-- Downtown Yonge -->
 					<div class="carousel__cell carousel__cell--background2" value="DowntownYonge">
 						<div class="carousel__imageContainer">
-							<img src="assets/boba.svg" alt="" class="carousel__image">
+							<img src="assets/boba.svg" alt="stylized icon of a bubble tea cup" class="carousel__image">
 						</div>
 
 						<h3 class="carousel__zone">Downtown Yonge</h3>
@@ -79,7 +79,7 @@
 					<!-- Harbord Village -->
 					<div class="carousel__cell carousel__cell--background3" value="HarbordVillage">
 						<div class="carousel__imageContainer">
-							<img src="assets/boba.svg" alt="" class="carousel__image">
+							<img src="assets/boba.svg" alt="stylized icon of a bubble tea cup" class="carousel__image">
 						</div>
 
 						<h3 class="carousel__zone">Harbord Village</h3>
@@ -88,7 +88,7 @@
 					<!-- Kensington-Chinatown -->
 					<div class="carousel__cell carousel__cell--background4" value="KensingtonChinatown">
 						<div class="carousel__imageContainer">
-							<img src="assets/boba.svg" alt="" class="carousel__image">
+							<img src="assets/boba.svg" alt="stylized icon of a bubble tea cup" class="carousel__image">
 						</div>
 
 						<h3 class="carousel__zone">Kensington-Chinatown</h3>
@@ -97,7 +97,7 @@
 					<!-- North York -->
 					<div class="carousel__cell carousel__cell--background5" value="NorthYork">
 						<div class="carousel__imageContainer">
-							<img src="assets/boba.svg" alt="" class="carousel__image">
+							<img src="assets/boba.svg" alt="stylized icon of a bubble tea cup" class="carousel__image">
 						</div>
 
 						<h3 class="carousel__zone">North York</h3>
@@ -106,7 +106,7 @@
 					<!-- Bloor West Village -->
 					<div class="carousel__cell carousel__cell--background6" value="BloorWestVillage">
 						<div class="carousel__imageContainer">
-							<img src="assets/boba.svg" alt="" class="carousel__image">
+							<img src="assets/boba.svg" alt="stylized icon of a bubble tea cup" class="carousel__image">
 						</div>
 
 						<h3 class="carousel__zone">Bloor West Village</h3>
@@ -115,7 +115,7 @@
 					<!-- Thornhill -->
 					<div class="carousel__cell carousel__cell--background7" value="Thornhill">
 						<div class="carousel__imageContainer">
-							<img src="assets/boba.svg" alt="" class="carousel__image">
+							<img src="assets/boba.svg" alt="stylized icon of a bubble tea cup" class="carousel__image">
 						</div>
 
 						<h3 class="carousel__zone">Thornhill</h3>
@@ -125,7 +125,7 @@
 					<!-- Richmond Hill -->
 					<div class="carousel__cell carousel__cell--background8" value="RichmondHill">
 						<div class="carousel__imageContainer">
-							<img src="assets/boba.svg" alt="" class="carousel__image">
+							<img src="assets/boba.svg" alt="stylized icon of a bubble tea cup" class="carousel__image">
 						</div>
 
 						<h3 class="carousel__zone">Richmond Hill</h3>
@@ -134,7 +134,7 @@
 					<!-- Dundas Street West -->
 					<div class="carousel__cell carousel__cell--background9" value="DundasStreetWest">
 						<div class="carousel__imageContainer">
-							<img src="assets/boba.svg" alt="" class="carousel__image">
+							<img src="assets/boba.svg" alt="stylized icon of a bubble tea cup" class="carousel__image">
 						</div>
 						
 						<h3 class="carousel__zone">Dundas Street West</h3>
@@ -148,11 +148,11 @@
 		<!-- TRANSITION START -->
 		<section class="transition">
 		<!-- ANIMATION -->
-			<div class="transition__imageContainer">
-				<img src="assets/temporaryPlaceIcon.png" alt="" class="transition__image">
-			</div>
+			<i class="fas fa-angle-double-down fa-3x transition__icon animated flip" aria-hidden="true"></i>
+
+			<i class="fas fa-angle-double-down fa-3x transition__icon animated flip" aria-hidden="true"></i>
 			
-			<i class="fas fa-angle-double-down fa-3x transition__icon"></i>
+			<i class="fas fa-angle-double-down fa-3x transition__icon animated flip" aria-hidden="true"></i>
 		</section>
 		<!-- TRANSTION END -->
 		
@@ -177,6 +177,10 @@
 					<label for="newArea" class="button__label visuallyhidden">Search other area</label>
 					<button class="button button__newArea" id="newArea">Search other area</button>
 				</div>
+
+				<div class="result__imageContainer animated wobble">
+					<img src="assets/bobaBubble.svg" aria-hidden="true" alt="" class="result__image">
+				</div>
 				<!-- RESULT BUTTONS END -->
 			</div>
 		</section>
@@ -191,7 +195,7 @@
 		<!-- IMAGES CREDIT START -->
 		<div class="footer__credits">
 			<div class="footer__unsplashLink">
-				<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
+				<a style="color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
 				href="https://unsplash.com/@creativeexchange?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
 				target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from The Creative Exchange"><span
 					style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white"
@@ -202,7 +206,7 @@
 			</div>
 
 			<div class="footer__unsplashLink">
-				<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
+				<a style="color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
 				href="https://unsplash.com/@ninjason?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
 				target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Jason Leung"><span
 					style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white"
@@ -213,7 +217,7 @@
 			</div>
 
 			<div class="footer__unsplashLink">
-				<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
+				<a style="color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
 				href="https://unsplash.com/@greysonjoralemon?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
 				target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Greyson Joralemon"><span
 					style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white"
@@ -224,7 +228,7 @@
 			</div>
 
 			<div class="footer__unsplashLink">
-				<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
+				<a style="color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
 				href="https://unsplash.com/@rawpixel?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
 				target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from rawpixel"><span
 					style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white"
