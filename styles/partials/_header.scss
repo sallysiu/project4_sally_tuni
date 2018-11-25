@@ -1,24 +1,24 @@
 .header {
     background: $text;
-    height: 40vh;    
-    background: url(../assets/background4.jpg);
+    height: 60vh;    
+    background: linear-gradient(to bottom rgba(107, 119, 212, 0.2), rgba(236, 237, 245, 0.2)), url(../assets/background4.jpg);
     background-size: cover;
     background-attachment: fixed;
     display: flex;
     align-items: center;
     &__wrapper {
-        padding: 20px;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
     }
     &__imageContainer {
         animation-duration: 1250ms;
         animation-delay: 300ms;
+        margin-right: 50px;
     }
     &__heading {
         @include heading(120);
-        color: $text;
-        margin-left: 50px;
+        color: $text;        
     }
     &__image {
         width: 150px;

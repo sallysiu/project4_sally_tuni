@@ -2,11 +2,7 @@
     padding: 100px 0 75px 0;
     display: none;
     position: relative;
-    &__place {
-        @include heading(60);
-        margin-bottom: 30px;
-        width: 80%;
-    }
+    background: $background;
     &__wrapper {
         background: $color;
         padding: 100px;
@@ -14,9 +10,22 @@
         20px 20px 0 $text;
         position: relative;
     } 
+    &__place {
+        @include heading(50);
+        margin-bottom: 50px;
+        width: 70%;
+    }    
+    &__address {
+        width: 70%;
+    }
     &__cuisine {
         margin-bottom: 50px;
-        width: 80%;
+        width: 70%;
+    }
+    &__buttons {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
     }
     &__imageContainer{
         position: absolute;
@@ -26,10 +35,7 @@
         animation-delay: 1500ms;
     }
     &__image {
-        display: block;
         width: 150px;
-        margin: 0 auto 50px auto;
-        fill: $text;
     }
 }
 

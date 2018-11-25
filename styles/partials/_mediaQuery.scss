@@ -1,24 +1,146 @@
 /* Landscape tablet and laptops*/
-@media (max-width: 1280px) {
-
+@media (max-width: 1280px) {    
+    .carousel {
+        &__cell {
+            width: 60%;
+        }
+        &__zone {
+            font-size: 3rem;
+        }
+    }
+    .result {
+        &__wrapper {
+            padding-bottom: 80px;
+        }
+    }
+    .button {
+        margin-bottom: 20px;
+    }
 }
 
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
-
+    html {
+        font-size: 55%;       
+    }
+    .header {
+        &__image {
+        width: 125px;
+        }
+    }
+    .areas {
+        padding: 75px 0;
+    }
+    .carousel {
+        &__cell {
+            width: 100%;
+            flex-direction: column;	
+            justify-content: center;
+            align-items: center;
+        }
+        &__imageContainer {
+            margin-bottom: 20px;
+        }        
+    }
+    .result {
+        &__image {
+            width: 125px;
+        }
+    }
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
-
+    .wrapper {
+        width: 100%;
+    }
+    .header {
+        &__wrapper {
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__imageContainer {
+            margin: 0 0 20px 0;
+        }
+        &__heading {
+            font-size: 10rem;
+        }
+    }
+    .areas {
+        padding: 50px 0;
+        &__heading,
+        &__text {
+            font-size: 4.8rem;
+            text-align: center;
+            margin: 0 10px 20px 10px;
+        }
+        &__text {
+            font-size: 2.4rem;            
+        }
+    }
+    .carousel {
+        &__zone {
+            font-size: 3.4rem;
+        }
+    }
+    .result {
+        padding: 50px;
+        &__wrapper {
+            padding: 50px;
+            width: 90%;
+            box-shadow: -20px -20px 0 $colorAccent,
+            20px 20px 0 $text;
+        } 
+        &__place {
+            font-size: 4.8rem;
+            width: 100%;
+        }
+        &__address,
+        &__cuisine {
+            font-size: 2.4rem;
+            width: 100%;
+        }
+        &__buttons {
+            justify-content: center;
+        }
+        &__imageContainer {
+            display: none;
+        }
+    }
+    .button {
+        font-size: 2.4rem;
+        margin-right: 0;  
+    }
 }
 
 /* Landscape phones */
 @media (max-width: 480px) {
-
+    .header {
+        &__heading {
+            font-size: 8rem;
+        }
+    }
+    .result {
+        padding: 25px;
+        &__wrapper {
+            padding: 0;
+            width: 100%;
+            box-shadow: none;
+            background: none;
+        } 
+        &__place,
+        &__address,
+        &__cuisine {
+            text-align: center;
+        }
+        &__place {
+            color: $colorAccent;
+        }
+    }
 }
-
 /* portrait phones to landscape phones  */
 @media (max-width: 320px) {
-    
+    html {
+        font-size: 52%;       
+    }
 }

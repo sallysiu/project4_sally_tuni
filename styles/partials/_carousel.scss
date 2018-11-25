@@ -10,9 +10,6 @@
         justify-content: flex-end;
         align-items: flex-end;        
         padding: 30px;
-        &:hover {
-            // ADD ANIMATION
-        }
         &--background1 {
             background: url(../assets/background1.jpg);
             background-size: cover;
@@ -49,15 +46,15 @@
     }
     &__imageContainer {
         max-width: 100px;
-    }
-    &__zone {
-        @include heading(36);
-    }
+    }    
     &__image {
         fill: $text;
         width: 65px;
     }
-    
+    &__zone {
+        @include heading(32);
+        text-align: center;
+    }    
 }
 
 // FLICKITY STYLES

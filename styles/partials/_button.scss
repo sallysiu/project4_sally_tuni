@@ -8,7 +8,7 @@
     color: $color;
     padding: 10px;
     transition: color 300ms ease-in, background 300ms ease-in, box-shadow 300ms ease-in;
-    margin-right: 20px;
+    margin-right: 20px;   
     &:hover {
         color: $text;
         background: $colorAccent;
