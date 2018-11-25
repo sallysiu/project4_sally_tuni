@@ -55,6 +55,7 @@
         width: 100%;
     }
     .header {
+        height: 85vh;   
         &__wrapper {
             flex-direction: column;
             justify-content: center;
@@ -64,6 +65,10 @@
         }
         &__heading {
             font-size: 10rem;
+        }
+        &__image {
+            width: 100px;
+            padding-top: 20px;
         }
     }
     .areas {
@@ -118,7 +123,7 @@
     .header {
         &__heading {
             font-size: 8rem;
-        }
+        }        
     }
     .result {
         padding: 25px;
