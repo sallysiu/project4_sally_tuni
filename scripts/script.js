@@ -16,6 +16,7 @@ $(function () {
 const bubbleApp = {};
 bubbleApp.apiKey = 'ca6458eda70bc2879ed3d6c923ba72a4';
 
+// Store all urls for AJAX calls to API
 bubbleApp.NorthYork = {
 	url: ["https://developers.zomato.com/api/v2.1/search?entity_id=87881&entity_type=subzone&cuisines=247", //NorthYork
 	"https://developers.zomato.com/api/v2.1/search?entity_id=87881&entity_type=subzone&start=20&cuisines=247" // NorthYork pt2
@@ -61,12 +62,11 @@ bubbleApp.BloorWestVillage = {
 }
 
 
-
 bubbleApp.userOptions = [];
 
 
 
-// Collect input from all
+// Collect input from API
 bubbleApp.getPlace = function (userChoice) {
 	bubbleApp.userOptions = [];
 	const promiseArray = [];
@@ -102,6 +102,7 @@ bubbleApp.getPlace = function (userChoice) {
 
 }
 
+// Chooses a random bubble tea location from the list of places in an area
 bubbleApp.randomChoice = function (curatedList) {
 	let randomLocation = curatedList[Math.floor(Math.random() * curatedList.length)];
 	// console.log(randomLocation)
@@ -111,7 +112,7 @@ bubbleApp.randomChoice = function (curatedList) {
 	$('.result__cuisine').text(`Cuisine found here: ${randomLocation.cuisine}`)
 };
 
-
+// Goes through the results of the AJAX calls and makes a new array with the required information, and displays the result of bubbleApp. randomChoice
 bubbleApp.certainInfoOnly = function (oldList) {
 	oldList.forEach((place) => {
 		const resObject = {};
@@ -148,6 +149,7 @@ bubbleApp.init = function () {
 
 }
 
+// Listens for the event of user clicking on their choice of area
 bubbleApp.listenForChoice = function () {
 	
 	$(".carousel__cell").on("click", function () {
@@ -162,10 +164,12 @@ bubbleApp.listenForChoice = function () {
 
 }
 
+// Allows the user to get a new random bubble tea location in the same area
 $(".button__newPlace").on("click", function() {
 	bubbleApp.randomChoice(bubbleApp.userOptions)
 })
 
+// Brings the user back up to choose a new area
 $(".button__newArea").on("click", function() {
 	$.smoothScroll({
 		autoFocus: true,
