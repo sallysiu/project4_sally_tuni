@@ -1,16 +1,12 @@
 .transition {
-    padding: 100px 0;
-    background: $colorAccent;
+    padding: 200px 0;
+    background: $color;
     display: none;
-    &__imageContainer {
-        max-width: 200px;
-        width: 20%;
-        margin: 0 auto 50px auto;
-    }
     &__icon {
         display: block;
         text-align: center;
-        margin: 0 auto;
-        color: $background;
+        margin: 0 auto 25px auto;
+        color: $text;
+        animation-duration: 1500ms;
     }
 }
