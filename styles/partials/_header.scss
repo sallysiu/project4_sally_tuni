@@ -1,8 +1,26 @@
 .header {
     background: $text;
-    height: 60vh;
+    height: 40vh;    
+    background: url(../assets/background4.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    &__wrapper {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+    }
+    &__imageContainer {
+        animation-duration: 1250ms;
+        animation-delay: 300ms;
+    }
     &__heading {
-        @include heading(100);
-        color: $background;
+        @include heading(120);
+        color: $text;
+        margin-left: 50px;
+    }
+    &__image {
+        width: 150px;
     }
 }

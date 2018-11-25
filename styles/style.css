@@ -191,15 +191,39 @@ li {
 
 .header {
   background: #4b5b86;
-  height: 60vh; }
+  height: 40vh;
+  background: url(../assets/background4.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .header__wrapper {
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .header__imageContainer {
+    -webkit-animation-duration: 1250ms;
+    animation-duration: 1250ms;
+    -webkit-animation-delay: 300ms;
+    animation-delay: 300ms; }
   .header__heading {
-    font-size: 10rem;
+    font-size: 12rem;
     font-family: "Coiny", cursive;
     letter-spacing: 0px;
     margin: 0;
     padding: 0;
-    line-height: 130px;
-    color: #ecedf5; }
+    color: #4b5b86;
+    margin-left: 50px; }
+  .header__image {
+    width: 150px; }
 
 .wrapper {
   width: 80%;
@@ -213,8 +237,7 @@ li {
     font-family: "Coiny", cursive;
     letter-spacing: 0px;
     margin: 0;
-    padding: 0;
-    line-height: 90px; }
+    padding: 0; }
 
 .carousel {
   width: 100%;
@@ -256,8 +279,7 @@ li {
     font-family: "Coiny", cursive;
     letter-spacing: 0px;
     margin: 0;
-    padding: 0;
-    line-height: 66px; }
+    padding: 0; }
   .carousel__image {
     fill: #4b5b86;
     width: 65px; }
@@ -306,7 +328,6 @@ li {
     letter-spacing: 0px;
     margin: 0;
     padding: 0;
-    line-height: 90px;
     margin-bottom: 30px;
     width: 80%; }
   .result__wrapper {
@@ -329,7 +350,8 @@ li {
   .result__image {
     display: block;
     width: 150px;
-    margin: 0 auto 50px auto; }
+    margin: 0 auto 50px auto;
+    fill: #4b5b86; }
 
 .button {
   -moz-appearance: none;
@@ -355,7 +377,7 @@ li {
 .footer {
   background: #4b5b86;
   color: #ecedf5;
-  padding: 30px 0; }
+  padding: 15px 0; }
   .footer__text {
     text-align: center;
     font-size: 1.6rem;
