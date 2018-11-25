@@ -62,7 +62,6 @@ bubbleApp.BloorWestVillage = {
 
 
 
-// bubbleApp.zones = [NorthYork, DowntownYonge];
 bubbleApp.userOptions = [];
 
 
